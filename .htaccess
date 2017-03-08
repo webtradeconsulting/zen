@@ -1,0 +1,21 @@
+AuthType Basic
+AuthName "WebtradeConsulting Protected Area"
+AuthUserFile /home/wks/web/webtradeconsulting.net/public_html/zen/.htpasswd
+Require valid-user
+
+#AuthType None
+#Require all granted
+#Satisfy Any
+
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress

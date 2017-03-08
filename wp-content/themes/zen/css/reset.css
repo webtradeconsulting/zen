@@ -1,0 +1,63 @@
+/*********************************************************************************************************************************** Reset */
+html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input,textarea,iframe { margin: 0; padding: 0; }
+img, a img, fieldset { border: none; }
+input, textarea, select, button, a { outline: none; }
+textarea { resize: vertical; font-family: 'Roboto', Arial, Tahoma, sans-serif; }
+label { cursor: pointer; }
+iframe { border: none; }
+p { margin: 0 0 15px 0; }
+a { color: #414142; cursor: pointer; }
+a { color: #414142; text-decoration: none; outline: none; -webkit-transition: 0.2s; -moz-transition: 0.2s; transition: 0.2s; }
+a:hover { color: #286482; text-decoration: none; }
+.content ul { list-style-position: inside; }
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+h1, h2, h3, h4, h5 {
+    line-height: normal;
+    font-weight: normal;
+    color: #286482;
+    text-transform: uppercase;
+}
+h1 {
+    padding: 50px 0;
+    font-size: 32px;
+    line-height: 26px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+}
+h2 {
+    padding: 50px 0;
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.ie_alert {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 15px 0 15px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 21px;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    z-index: 10000;
+    border-radius: 0;
+}
+.alert-dismissable.ie_alert  .close, .alert-dismissible.ie_alert  .close {
+    right: 0;
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}

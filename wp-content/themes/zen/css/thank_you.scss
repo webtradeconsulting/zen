@@ -1,0 +1,18 @@
+.thank_you_img {
+  position: relative;
+  padding-bottom: 100px;
+  text-align: center;
+  &:after {
+    @extend .error_actions_title:after;
+  }
+  img {
+    max-width: 20%;
+  }
+}
+.thank_you_page_content {
+  @extend .error_actions_title;
+  padding-bottom: 30px;
+  &:after {
+    content: none;
+  }
+}
