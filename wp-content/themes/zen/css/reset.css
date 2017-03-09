@@ -1,7 +1,7 @@
 /*********************************************************************************************************************************** Reset */
 html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input,textarea,iframe { margin: 0; padding: 0; }
 img, a img, fieldset { border: none; }
-input, textarea, select, button, a { outline: none; }
+input, textarea, select, button, a { outline: none; transition: 0.2s; }
 textarea { resize: vertical; font-family: 'Roboto', Arial, Tahoma, sans-serif; }
 label { cursor: pointer; }
 iframe { border: none; }

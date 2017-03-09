@@ -1,0 +1,108 @@
+@import "variables";
+.map_block {
+  position: relative;
+}
+.contact_info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 0 60px;
+  background: #00ba7f;
+  z-index: 10;
+}
+.contact_info_item {
+  display: inline-block;
+  padding-right: 35px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #fff;
+  font-weight: 400;
+  vertical-align: top;
+    &:first-child {
+      span {
+        vertical-align: top;
+      }
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+    a, i {
+      display: inline-block;
+      padding-left: 10px;
+      color: inherit;
+      font-style: normal;
+    }
+    a:hover {
+      color: #2482b7;
+    }
+    span {
+      font-size: 30px;
+      vertical-align: middle;
+    }
+}
+.contact_form_wrap {
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.contact_form {
+  padding: 20px 40px 30px;
+  max-width: 1170px;
+  margin: 0 auto;
+  background: #2381b7;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+    .contact_form_title {
+      margin-bottom: 40px;
+      font-size: 22px;
+      line-height: 30px;
+      color: #fff;
+      font-weight: 400;
+    }
+    .form_field {
+      display: inline-block;
+      width: 220px;
+      margin-right: 15px;
+      input, textarea {
+        display: inline-block;
+        width: 100%;
+        vertical-align: bottom;
+        color: #fff;
+        font-size: 18px;
+        line-height: 22px;
+        padding: 3px 0 3px;
+        border: 0;
+        background: none;
+        border-bottom: 1px solid #fff;
+        resize: none;
+          &::-webkit-input-placeholder {color:#fff; font-weight: 400;}
+          &::-moz-placeholder          {color:#fff; font-weight: 400;}
+          &:-moz-placeholder           {color:#fff; font-weight: 400;}
+          &:-ms-input-placeholder      {color:#fff; font-weight: 400;}
+          &:focus {
+            border-color: #53b6ef;
+          }
+      }
+      input[type="submit"] {
+        width: auto;
+        padding: 16px 23px;
+        font-size: 18px;
+        line-height: 22px;
+        color: $content_color_design;
+        text-transform: uppercase;
+        font-weight: 500;
+        background: #fff;
+        border: 0;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+          &:hover, &:focus {
+            background: #cce3ef;
+          }
+      }
+    }
+}
