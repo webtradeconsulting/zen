@@ -238,7 +238,10 @@
     padding: 13px 0 10px 0;
     font-size: 20px;
     line-height: 42px;
-    text-align: center; } }
+    text-align: center; }
+
+  .footer_logo {
+    padding-right: 0; } }
 @media screen and (min-width: 1366px) {
   .header .header_menu {
     position: static;
