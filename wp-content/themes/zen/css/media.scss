@@ -1,3 +1,81 @@
+@media screen and (max-width: 992px) {
+  .main_slider {
+    min-height: 430px;
+  }
+  .main_slider .main_call_master_block {
+    height: 167px;
+  }
+  .main_slider .main_call_master_field {
+    max-width: 100%;
+    padding: 15px 20px 15px 20px;
+    margin-top: 45px;
+    margin-left: 0;
+  }
+  .main_slider .main_call_master_block .bootstrap-select .btn.dropdown-toggle {
+    font-size: 19px;
+    line-height: 23px;
+  }
+  .main_slider .main_call_master_block label {
+    font-size: 21px;
+    line-height: 25px;
+  }
+  .main_slider .main_call_master_field .main_call_btn {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .main_about {
+    padding: 45px 0;
+  }
+  .main_about_text {
+    width: 100%;
+    padding-top: 0;
+    margin-left: 0;
+    margin-bottom: 25px;
+  }
+  .main_about .main_slider_right_item {
+    max-height: 100%;
+  }
+  .main_about {
+    padding: 120px 0 45px;
+  }
+  .main_help_quote {
+    padding: 130px 0 25px;
+  }
+  .main_help_quote:before {
+    top: 30px;
+  }
+  .main_help_quote .quote_footer span {
+    margin-top: 35px;
+  }
+  .main_help .main_help_container {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+  .main_help h2 {
+    margin: 0 0 30px;
+    font-size: 26px;
+    line-height: 30px;
+  }
+  .main_help .help_form label {
+    margin-right: 15px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .main_help .main_form_next_btn a {
+    margin-left: 50px;
+  }
+  .main_help .help_form input[type="submit"] {
+    margin: 20px 0 0 170px;
+  }
+  .main_infographics .main_infographics_item.main_infographics_item_title h2 {
+    padding: 13px 50px 10px 25px;
+    font-size: 50px;
+    line-height: 72px;
+  }
+  .main_infographics .main_infographics_item.main_infographics_item_title h2:before {
+    content: none;
+  }
+}
 @media screen and (max-width: 768px) {
   .header {
     .header_inner {
@@ -39,6 +117,140 @@
       bottom: auto;
       margin-right: 0;
     }
+  }
+  .main_slider {
+    min-height: 100%;
+  }
+  .main_slider_right {
+    position: static;
+    max-height: 100%;
+    height: auto;
+  }
+  .main_slider_right_item {
+    float: none;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .main_slider .main_call_master_block {
+    transform: translateY(0px);
+    text-align: center;
+  }
+  .main_slider .main_call_master_field {
+    margin-top: 15px;
+  }
+  .main_slider .main_call_master_block label {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 3px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .wpcf7-form-control-wrap.broken {
+    display: block;
+  }
+  .main_slider .main_call_master_field .main_call_btn {
+    padding: 9px 25px;
+    margin-left: 22px;
+    font-size: 13px;
+    line-height: 17px;
+    margin-top: 15px;
+  }
+  .main_slider .main_call_master_block .bootstrap-select .btn.dropdown-toggle {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .main_about {
+    padding: 20px 0 20px;
+  }
+  .main_about_text h2 {
+    margin-bottom: 5px;
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .main_about_text p {
+    font-size: 15px;
+    line-height: 19px;
+  }
+  .main_about_img {
+    max-width: 320px;
+    margin: 0 auto;
+    float: none;
+  }
+  .main_help_quote:before {
+    top: 10px;
+    margin-left: -20px;
+    width: 40px;
+    height: 42px;
+    background: url(../images/quote_bg.png) 50% 50% no-repeat/contain;
+  }
+  .main_help_quote {
+    padding: 60px 0 15px;
+  }
+  .main_help_quote p {
+    font-size: 15px;
+    line-height: 19px;
+  }
+  .main_help_quote .quote_footer span {
+    margin-top: 15px;
+    margin-right: 50px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .main_help_quote .quote_footer span:before {
+    left: -28px;
+    bottom: 5px;
+    width: 20px;
+  }
+  .main_help .main_help_container {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  .main_help h2 {
+    margin: 0 0 15px;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+  .main_help .help_form .main_form_field {
+    float: none;
+  }
+  .main_help .help_form label {
+    margin-right: 5px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .main_help .help_form input {
+    width: 180px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .main_help .main_form_next_btn a {
+    width: 38px;
+    height: 38px;
+    margin-left: 0;
+    margin-top: 15px;
+    font-size: 20px;
+    line-height: 37px;
+  }
+  .main_help .help_form input[type="submit"] {
+    padding: 10px 65px;
+    margin-left: 0;
+    font-size: 15px;
+    line-height: 19px;
+  }
+  .main_infographics {
+    padding: 20px 0;
+  }
+  .main_infographics .main_infographics_item.main_infographics_item_title {
+    height: auto;
+  }
+  .main_infographics .main_infographics_item.main_infographics_item_title h2 {
+    padding: 13px 0 10px 0;
+    font-size: 20px;
+    line-height: 42px;
+    text-align: center;
   }
 }
 @media screen and (min-width: 1366px) {

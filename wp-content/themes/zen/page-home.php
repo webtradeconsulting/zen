@@ -43,7 +43,7 @@
 				</div>
 				<div class="col-md-8">
 					<div class="row">
-						<div class="main_about_img col-md-4 col-sm-6">
+						<div class="main_about_img col-md-4 col-sm-6 col-xs-12">
 							<img src="<?php bloginfo('template_url'); ?>/images/about-img1.jpg" alt="">
 							<a href="#" class="main_about_overlay main_slider_right_item">
 								<i>KITCHEN</i>
@@ -51,7 +51,7 @@
 								<b href="#">→</b>
 							</a>
 						</div>
-						<div class="main_about_img col-md-4 col-sm-6">
+						<div class="main_about_img col-md-4 col-sm-6 col-xs-12">
 							<img src="<?php bloginfo('template_url'); ?>/images/about-img2.jpg" alt="">
 							<a href="#" class="main_about_overlay main_slider_right_item">
 								<i>KITCHEN</i>
@@ -59,7 +59,7 @@
 								<b href="#">→</b>
 							</a>
 						</div>
-						<div class="main_about_img col-md-4 col-sm-6">
+						<div class="main_about_img col-md-4 col-sm-6 col-xs-12">
 							<img src="<?php bloginfo('template_url'); ?>/images/about-img3.jpg" alt="">
 							<a href="#" class="main_about_overlay main_slider_right_item">
 								<i>KITCHEN</i>
@@ -67,7 +67,7 @@
 								<b href="#">→</b>
 							</a>
 						</div>
-						<div class="main_about_img col-md-4 col-sm-6">
+						<div class="main_about_img col-md-4 col-sm-6 col-xs-12">
 							<img src="<?php bloginfo('template_url'); ?>/images/about-img4.jpg" alt="">
 							<a href="#" class="main_about_overlay main_slider_right_item">
 								<i>KITCHEN</i>
@@ -75,7 +75,7 @@
 								<b href="#">→</b>
 							</a>
 						</div>
-						<div class="main_about_img col-md-4 col-sm-6">
+						<div class="main_about_img col-md-4 col-sm-6 col-xs-12">
 							<img src="<?php bloginfo('template_url'); ?>/images/about-img5.jpg" alt="">
 							<a href="#" class="main_about_overlay main_slider_right_item">
 								<i>KITCHEN</i>
@@ -83,7 +83,7 @@
 								<b href="#">→</b>
 							</a>
 						</div>
-						<div class="main_about_img col-md-4 col-sm-6">
+						<div class="main_about_img col-md-4 col-sm-6 col-xs-12">
 							<img src="<?php bloginfo('template_url'); ?>/images/about-img6.jpg" alt="">
 							<a href="#" class="main_about_overlay main_slider_right_item">
 								<i>KITCHEN</i>
@@ -127,28 +127,26 @@
 		<div class="main_infographics">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-4 main_infographics_item main_infographics_item_title">
+					<div class="col-sm-4 col-sm-6 col-xs-12 main_infographics_item main_infographics_item_title">
 						<h2>infographics</h2>
 					</div>
-					<div class="col-sm-4 main_infographics_item">
+					<div class="col-sm-4 col-sm-6 col-xs-12 main_infographics_item">
 						<img src="<?php bloginfo('template_url'); ?>/images/infographics1.png" alt="">
 						<span>Fast service</span>
 					</div>
-					<div class="col-sm-4 main_infographics_item">
+					<div class="col-sm-4 col-sm-6 col-xs-12 main_infographics_item">
 						<img src="<?php bloginfo('template_url'); ?>/images/infographics2.png" alt="">
 						<span>High quality</span>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-4 main_infographics_item">
+					<div class="col-sm-4 col-sm-6 col-xs-12 main_infographics_item">
 						<img src="<?php bloginfo('template_url'); ?>/images/infographics3.jpg" alt="">
 						<span>Experienced technicians</span>
 					</div>
-					<div class="col-sm-4 main_infographics_item">
+					<div class="col-sm-4 col-sm-6 col-xs-12 main_infographics_item">
 						<img src="<?php bloginfo('template_url'); ?>/images/infographics4.png" alt="">
 						<span>Fair pricing</span>
 					</div>
-					<div class="col-sm-4 main_infographics_item">
+					<div class="col-sm-4 col-sm-6 col-xs-12 main_infographics_item">
 						<img src="<?php bloginfo('template_url'); ?>/images/infographics5.png" alt="">
 						<span>Quality parts</span>
 					</div>
