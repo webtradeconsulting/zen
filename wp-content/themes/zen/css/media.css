@@ -1,0 +1,97 @@
+@media screen and (max-width: 768px) {
+  .header .header_inner {
+    padding-left: 10px; }
+  .header .logo {
+    height: 65px;
+    margin-top: 0; }
+    .header .logo img {
+      width: auto;
+      height: 100%; }
+  .header .header_phone {
+    display: none;
+    float: none;
+    width: auto;
+    background: none; }
+    .header .header_phone span {
+      display: none; }
+    .header .header_phone a {
+      font-size: 16px;
+      line-height: 20px;
+      padding: 0; }
+      .header .header_phone a:hover {
+        color: #14e2a1;
+        background: none; }
+  .header .header_search {
+    top: 19px;
+    right: 81px; }
+  .header .navbar-toggle {
+    top: 30px;
+    right: 15px;
+    bottom: auto;
+    margin-right: 0; } }
+@media screen and (min-width: 1366px) {
+  .header .header_menu {
+    position: static;
+    float: left;
+    width: auto;
+    margin-right: 25px;
+    padding: 0; }
+    .header .header_menu ul {
+      list-style-type: none;
+      padding: 0;
+      background: none;
+      margin: 0; }
+    .header .header_menu li {
+      float: left; }
+      .header .header_menu li a {
+        display: inline-block;
+        padding: 49px 20px 40px;
+        font-size: 14px;
+        line-height: 19px;
+        font-weight: 400;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #004871;
+        transition: 0.2s; }
+        .header .header_menu li a:hover {
+          color: #fff;
+          background: #1777ad; }
+  .header .navbar-toggle {
+    display: none; }
+  .header .navbar-collapse.collapse,
+  .header .collapse.in {
+    display: block !important;
+    visibility: visible !important; }
+  .header .header_search_open {
+    display: none; }
+  .header .header_search_form {
+    position: relative;
+    width: 210px;
+    visibility: visible;
+    opacity: 1;
+    margin-top: 87px; }
+  .header .header_search {
+    float: left;
+    position: static; }
+    .header .header_search.active .header_search_form {
+      display: block; }
+
+  .main_slider {
+    min-height: 711px; }
+
+  .main_slider_right {
+    width: 257px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    max-height: 100%; }
+
+  .main_slider_right_item {
+    float: none;
+    margin-right: 0;
+    height: 33.2%;
+    margin-top: 1px;
+    width: 100%; } }
+
+/*# sourceMappingURL=media.css.map */

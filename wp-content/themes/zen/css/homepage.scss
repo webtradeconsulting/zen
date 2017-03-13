@@ -1,7 +1,7 @@
 $btn_bg: #ec821b;
 .main_slider {
   position: relative;
-  min-height: 711px;
+  min-height: 550px;
   background: url(../images/main-slider-img.jpg) 50% 50% no-repeat;
   background-size: cover;
   .main_call_master_block {
@@ -70,18 +70,23 @@ $btn_bg: #ec821b;
   }
 }
 .main_slider_right {
-  width: 257px;
+  width: 100%;
   position: absolute;
   top: 0;
   right: 0;
   height: 100%;
+  max-height: 240px;
 }
 .main_slider_right_item {
+  float: left;
   display: block;
-  height: 33.2%;
+  height: auto;
+  max-height: 240px;
+  width: 33.2%;
   padding: 20px;
   background: rgba(5, 76, 116, 0.6);
   margin-top: 1px;
+  margin-right: 1px;
   &:hover {
     text-decoration: none;
     background: rgba(5, 76, 116, 0.9);

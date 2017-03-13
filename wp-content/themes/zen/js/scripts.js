@@ -22,6 +22,23 @@ $(document).ready(function(){
         return false;
     });
 
+    $('#contact_message').attr('rows', 1);
+
+    jQuery('.header_search_open').live('click', function() {
+        if($('.header_search').hasClass('active')) {
+            $('.header_search').removeClass('active');
+        } else {
+            $('.header_search').addClass('active');
+            setTimeout(function(){
+                $('.header_search_form').find('input').focus();
+            }, 400);
+        }
+    });
+    $(document).mousedown(function (e) {
+        if (!$('.header_search_form').is(e.target) && !$('.header_search span').is(e.target) && $('.header_search_form').has(e.target).length == 0) {
+            $('.header_search').removeClass('active');
+        }
+    });
 
 });
 

@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 	
 	<?php if ( have_posts() AND get_search_query() ) : ?>
-		<h1 class="page_title"><div class="container">Search Results for: <span><?php echo trim(strip_tags(get_search_query())); ?></span></div></h1>
 		<div class="container content_container">
-			
+        <h1 class="page_title"><span>Search Results for: <?php echo trim(strip_tags(get_search_query())); ?></span></h1>
+
 			<div class="page_content search_list">
 				<?php while ( have_posts() ) : the_post(); ?>
 					<div class="search_item">
@@ -21,11 +21,11 @@
 									$post_title_prefix = '';
 								}
 							?>
-							
+
 							<a href="<?php echo $post_link; ?>">
-								<?php 
+								<?php
 									$title = get_the_title();
-									
+
 									if($s != '') {
 										$keys= explode(" ",$s);
 										$title = preg_replace('/('.implode('|', $keys) .')/iu', '<span class="search_highlight">\0</span>', $title);
@@ -34,9 +34,9 @@
 								?>
 							</a>
 						</h2>
-						
+
 						<div class="search_content">
-							<?php 
+							<?php
 								$excerpt = get_the_excerpt();
 								if($s != '') {
 									$keys= explode(" ",$s);
@@ -48,7 +48,7 @@
 					</div>
 				<?php endwhile; ?>
 			</div>
-			
+
 			<?php wtc_paging_nav(); ?>
 		</div>
 	<?php else : ?>

@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap-select.min.css">
     <link rel='stylesheet' href="<?php bloginfo('template_url'); ?>/css/main.css" type="text/css" media='all' />
+    <link rel='stylesheet' href="<?php bloginfo('template_url'); ?>/css/media.css" type="text/css" media='all' />
 
 
     <script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/libs/jquery.min.js'></script>
@@ -37,20 +38,25 @@
 </head>
 <body <?php body_class(); ?>>
 <header class="header">
-    <div class="header_inner">
+    <div class="header_inner clearfix">
         <div class="logo">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="Zen Appliance"></a>
         </div>
-        <nav class="header_menu">
-            <ul class="clearfix">
-                <?php
-                if (has_nav_menu('top_menu')) :
-                    wp_nav_menu(array('theme_location' => 'top_menu'));
-                endif;
-                ?>
-            </ul>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".header_menu">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <nav class="header_menu navbar-collapse collapse">
+            <?php
+            if (has_nav_menu('top_menu')) :
+                wp_nav_menu(array('theme_location' => 'top_menu'));
+            endif;
+            ?>
         </nav>
         <div class="header_search">
+            <div class="header_search_open"><span class="glyphicon glyphicon-search"></span></div>
             <?php echo get_search_form(); ?>
         </div>
         <div class="header_phone">

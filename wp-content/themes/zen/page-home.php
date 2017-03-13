@@ -7,18 +7,7 @@
 		<div class="main_slider">
             <div class="main_call_master_block">
                 <div class="container">
-                    <form action="">
-                        <div class="main_call_master_field">
-                            <label for="master_call">Broken</label>
-                            <select class="selectpicker" name="" id="master_call">
-                                <option value="">washing machine</option>
-                                <option value="">washing machine</option>
-                                <option value="">washing machine</option>
-                                <option value="">washing machine</option>
-                            </select>
-							<button class="main_call_btn">call the master</button>
-						</div>
-                    </form>
+                    <?php echo do_shortcode('[contact-form-7 id="43" title="Main Slider Form"]'); ?>
                 </div>
             </div>
             <div class="main_slider_right">
@@ -54,7 +43,7 @@
 				</div>
 				<div class="col-md-8">
 					<div class="row">
-						<div class="main_about_img col-md-4">
+						<div class="main_about_img col-md-4 col-sm-6">
 							<img src="<?php bloginfo('template_url'); ?>/images/about-img1.jpg" alt="">
 							<a href="#" class="main_about_overlay main_slider_right_item">
 								<i>KITCHEN</i>
@@ -62,7 +51,7 @@
 								<b href="#">→</b>
 							</a>
 						</div>
-						<div class="main_about_img col-md-4">
+						<div class="main_about_img col-md-4 col-sm-6">
 							<img src="<?php bloginfo('template_url'); ?>/images/about-img2.jpg" alt="">
 							<a href="#" class="main_about_overlay main_slider_right_item">
 								<i>KITCHEN</i>
@@ -70,7 +59,7 @@
 								<b href="#">→</b>
 							</a>
 						</div>
-						<div class="main_about_img col-md-4">
+						<div class="main_about_img col-md-4 col-sm-6">
 							<img src="<?php bloginfo('template_url'); ?>/images/about-img3.jpg" alt="">
 							<a href="#" class="main_about_overlay main_slider_right_item">
 								<i>KITCHEN</i>
@@ -78,9 +67,7 @@
 								<b href="#">→</b>
 							</a>
 						</div>
-					</div>
-					<div class="row">
-						<div class="main_about_img col-md-4">
+						<div class="main_about_img col-md-4 col-sm-6">
 							<img src="<?php bloginfo('template_url'); ?>/images/about-img4.jpg" alt="">
 							<a href="#" class="main_about_overlay main_slider_right_item">
 								<i>KITCHEN</i>
@@ -88,7 +75,7 @@
 								<b href="#">→</b>
 							</a>
 						</div>
-						<div class="main_about_img col-md-4">
+						<div class="main_about_img col-md-4 col-sm-6">
 							<img src="<?php bloginfo('template_url'); ?>/images/about-img5.jpg" alt="">
 							<a href="#" class="main_about_overlay main_slider_right_item">
 								<i>KITCHEN</i>
@@ -96,7 +83,7 @@
 								<b href="#">→</b>
 							</a>
 						</div>
-						<div class="main_about_img col-md-4">
+						<div class="main_about_img col-md-4 col-sm-6">
 							<img src="<?php bloginfo('template_url'); ?>/images/about-img6.jpg" alt="">
 							<a href="#" class="main_about_overlay main_slider_right_item">
 								<i>KITCHEN</i>
