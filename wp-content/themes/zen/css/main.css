@@ -8,6 +8,9 @@ html, body {
   position: relative;
   word-wrap: break-word; }
 
+body {
+  padding-top: 105px; }
+
 a {
   color: #414142;
   text-decoration: none;
@@ -260,7 +263,10 @@ h1.page_title, .page_content .typorgraphy_title {
     line-height: 32px; }
 
 .header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background: #fff;
   z-index: 10;
   -webkit-box-shadow: 0 7px 29px 0 rgba(50, 50, 50, 0.55);
@@ -1049,12 +1055,11 @@ h1.page_title, .page_content .typorgraphy_title {
   .footer:before {
     content: '';
     position: absolute;
-    top: 0;
+    top: -18px;
     left: 0;
     width: 100%;
     height: 42px;
-    background: url("../images/footer_line.png") 50% 0 no-repeat;
-    background-size: 100% auto; }
+    background: url("../images/footer_top_line.png") 50% 0 repeat-x; }
   .footer .container {
     position: relative; }
   .footer .footer_line {

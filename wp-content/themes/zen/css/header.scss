@@ -1,5 +1,8 @@
 .header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background: #fff;
   z-index: 10;
   -webkit-box-shadow: 0 7px 29px 0 rgba(50, 50, 50, 0.55);
@@ -38,7 +41,6 @@
   }
   .navbar-toggle {
     display: block;
-    //margin: 25px 0 0 10px;
     border-color: #515964;
     position: absolute;
     bottom: 11px;
