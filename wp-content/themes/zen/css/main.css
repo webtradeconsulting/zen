@@ -294,10 +294,16 @@ h1.page_title, .page_content .typorgraphy_title {
     padding-left: 40px; }
   .header .logo {
     float: left;
-    max-height: 125px;
-    margin-top: -17px;
+    height: 150px;
+    margin-top: -36px;
     margin-right: 50px;
-    overflow: hidden; }
+    overflow: hidden;
+    background: url(../images/logo_circle.png) 50% 50% no-repeat;
+    position: relative;
+    z-index: 20;
+    top: 9px; }
+    .header .logo img {
+      margin-top: 68px; }
   .header .navbar-toggle {
     display: block;
     border-color: #515964;
@@ -403,9 +409,11 @@ h1.page_title, .page_content .typorgraphy_title {
     float: right;
     width: 257px;
     height: 100%;
-    padding: 8px 20px 15px;
+    padding: 8px 20px 25px;
     text-align: center;
-    background: #00ba7f; }
+    background: #00ba7f;
+    position: relative;
+    z-index: 20; }
     .header .header_phone span {
       display: block;
       padding-bottom: 5px;
@@ -710,8 +718,7 @@ h1.page_title, .page_content .typorgraphy_title {
     left: 0;
     width: 100%;
     height: 28px;
-    background: url("../images/green_line.png") 50% 0 no-repeat;
-    background-size: cover; }
+    background: url("../images/green_line.png"); }
   .main_help_quote p {
     margin: 0 auto;
     font-size: 22px;
@@ -945,6 +952,48 @@ h1.page_title, .page_content .typorgraphy_title {
       border-radius: 6px; }
       .contact_form .form_field input[type="submit"]:hover, .contact_form .form_field input[type="submit"]:focus {
         background: #cce3ef; }
+
+body.page-template-page-faq {
+  background: url(../images/faq_bg.jpg) 50% 50% no-repeat/cover; }
+
+.faq_item {
+  margin-bottom: 6px;
+  background: rgba(255, 255, 255, 0.85);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+
+.faq_title a {
+  display: block;
+  padding: 20px 40px;
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #336d8d; }
+  .faq_title a:hover {
+    color: #60a2c6; }
+  .faq_title a:after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 12px;
+    margin-top: 5px;
+    float: right;
+    background: url(../images/faq_arr_down.png) 50% 50% no-repeat; }
+
+.faq_item.active {
+  background: #fff; }
+  .faq_item.active .faq_title a:after {
+    background: url(../images/faq_arr_up.png) 50% 50% no-repeat; }
+
+.faq_content {
+  display: none;
+  padding: 0 40px 40px; }
+  .faq_content p {
+    padding-bottom: 0;
+    font-size: 14px;
+    line-height: 20px; }
 
 .error_image {
   margin-bottom: 60px;

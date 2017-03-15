@@ -1,0 +1,14 @@
+body.page-template-page-faq {
+  background: url(../images/faq_bg.jpg) 50% 50% no-repeat/cover; }
+
+.faq_title a {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #336d8d; }
+  .faq_title a:hover {
+    color: #418ab2; }
+
+/*# sourceMappingURL=faq.css.map */

@@ -40,6 +40,24 @@ $(document).ready(function(){
         }
     });
 
+    //FAQ
+    $('.faq_item').first().addClass('active').find('.faq_content').css('display', 'block');
+    $('.faq_title a').click(function(){
+        if($(this).parents('.faq_item').hasClass('active')) {
+            $(this).parents('.faq_item').find('.faq_content').slideUp(200, function(){
+                $(this).parents('.faq_item').removeClass('active');
+            });
+        } else {
+            $('.faq_item.active .faq_content').slideUp(200, function(){
+                $('.faq_item.active').removeClass('active');
+            });
+            $(this).parents('.faq_item').find('.faq_content').slideDown(200, function(){
+                $(this).parents('.faq_item').addClass('active');
+            });
+        }
+        return false;
+    });
+
 });
 
 
