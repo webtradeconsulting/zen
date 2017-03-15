@@ -33,10 +33,17 @@
   }
   .logo {
     float: left;
-    max-height: 125px;
-    margin-top: -17px;
+    height: 150px;
+    margin-top: -36px;
     margin-right: 50px;
     overflow: hidden;
+    background: url(../images/logo_circle.png) 50% 50% no-repeat;
+    position: relative;
+    z-index: 20;
+    top: 9px;
+      img {
+        margin-top: 68px;
+      }
   }
   .navbar-toggle {
     display: block;
@@ -165,9 +172,11 @@
     float: right;
     width: 257px;
     height: 100%;
-    padding: 8px 20px 15px;
+    padding: 8px 20px 25px;
     text-align: center;
     background: #00ba7f;
+    position: relative;
+    z-index: 20;
     span {
       display: block;
       padding-bottom: 5px;
