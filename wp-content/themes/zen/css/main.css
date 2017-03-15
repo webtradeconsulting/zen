@@ -284,12 +284,11 @@ h1.page_title, .page_content .typorgraphy_title {
   .header:after {
     content: '';
     position: absolute;
-    bottom: -9px;
+    bottom: -24px;
     left: 0;
     width: 100%;
-    height: 10px;
-    background: url(../images/header_line.png) 50% 0 no-repeat;
-    background-size: 100% auto; }
+    height: 32px;
+    background: url(../images/header_line_sh.png); }
   .header .header_inner {
     max-height: 105px;
     padding-left: 40px; }
