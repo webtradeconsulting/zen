@@ -16,6 +16,15 @@
     <meta name="format-detection" content="telephone=no">
     <title><?php wp_title('|', true, 'right'); ?></title>
 
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php bloginfo('template_url'); ?>/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="<?php bloginfo('template_url'); ?>/images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="<?php bloginfo('template_url'); ?>/images/favicon/manifest.json">
+    <link rel="mask-icon" href="<?php bloginfo('template_url'); ?>/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon/favicon.ico">
+    <meta name="msapplication-config" content="<?php bloginfo('template_url'); ?>/images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
     <?php wp_head(); ?>
 
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
