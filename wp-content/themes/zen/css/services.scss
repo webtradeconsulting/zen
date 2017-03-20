@@ -1,0 +1,207 @@
+body.post-type-archive-services {
+  background: url(../images/services_bg.jpg) 50% 50% no-repeat/cover;
+}
+.services_sidebar {
+  padding: 40px 0;
+  background: rgba(255, 255, 255, 0.4);
+    ul {
+      padding: 0;
+      list-style-type: none;
+        li.has_children {
+            &>a {
+              display: block;
+              padding: 20px 0 20px 50px;
+              font-size: 18px;
+              line-height: 22px;
+              color: #fff;
+              font-weight: 400;
+              background: rgba(22, 117, 170, 0.4);
+                em {
+                  font-style: normal;
+                }
+            }
+            span {
+              float: right;
+              margin-right: 17px;
+              margin-top: 1px;
+            }
+            &.kitchen {
+              &>a {
+                background: rgba(22, 117, 170, 0.4) url(../images/services_kitchen.png) 10px 50% no-repeat/29px 35px;
+              }
+            }
+            &.laundry {
+              &>a {
+                background: rgba(22, 117, 170, 0.4) url(../images/services-laundry.png) 10px 50% no-repeat/32px 35px;
+              }
+            }
+            &.residential-appliance-parts {
+              &>a {
+                background: rgba(22, 117, 170, 0.4) url(../images/services-residential.png) 10px 50% no-repeat/29px 29px;
+              }
+            }
+            ul {
+              margin: 15px 20px 15px 40px;
+            }
+            li {
+              a {
+                display: inline-block;
+                font-size: 16px;
+                line-height: 26px;
+                color: #fff;
+                font-weight: 400;
+                  &:hover {
+                    color: #00ffae;
+                  }
+              }
+            }
+            &:hover {
+              &>a {
+                background-color: rgba(0, 186, 127, 0.4);
+              }
+            }
+
+        }
+    }
+}
+.services_sidebar_border {
+  border: 6px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+}
+
+.services_content {
+  h2 {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 34px;
+    line-height: 38px;
+    color: #fff;
+    font-weight: 500;
+    text-transform: capitalize;
+    text-align: left;
+    background: rgba(25, 124, 180, 0.4);
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+  }
+  b {
+    display: inline-block;
+    padding: 0 0 20px;
+    font-size: 18px;
+    line-height: 22px;
+    color: #fff;
+    font-weight: 400;
+  }
+  p {
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #9aa9b2;
+  }
+  .services_green_block {
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+    background: rgba(0, 186, 127, 0.4);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+  }
+  .services_list_block {
+    margin-bottom: 30px;
+    h3 {
+      padding: 10px 20px;
+      margin: 0;
+      font-size: 22px;
+      line-height: 26px;
+      color: #fff;
+      text-align: left;
+      text-transform: none;
+      background: rgba(25, 124, 180, 0.4);
+      -webkit-border-radius: 8px 8px 0 0;
+      -moz-border-radius: 8px 8px 0 0;
+      border-radius: 8px 8px 0 0;
+    }
+    .services_list_content {
+      padding: 30px;
+      background: rgba(77, 109, 128, 0.4);
+      border: 1px solid rgba(153, 190, 210, 0.4);
+      -webkit-border-radius: 0 0 8px 8px;
+      -moz-border-radius: 0 0 8px 8px;
+      border-radius: 0 0 8px 8px;
+        ul {
+          display: inline-block;
+          padding-right: 60px;
+          list-style-type: none;
+          vertical-align: top;
+            &:last-child {
+              padding-right: 0;
+            }
+        }
+        li {
+          margin-bottom: 6px;
+          font-size: 18px;
+          line-height: 22px;
+          color: #fff;
+          font-weight: 400;
+        }
+    }
+  }
+}
+
+.services_infographics {
+  padding: 100px 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+.infographics_item {
+  position: relative;
+  min-height: 175px;
+  padding: 0 10px;
+  text-align: center;
+  background: rgba(77, 109, 128, 0.4);
+  border: 1px solid rgba(153, 190, 210, 0.4);
+    .infographics_item_img {
+      position: absolute;
+      left: 0;
+      top: -12px;
+      width: 100%;
+    }
+    &.trust {
+      img {
+        width: 129px;
+        height: 100px;
+      }
+    }
+    &.quote {
+      img {
+        width: 127px;
+        height: 105px;
+      }
+    }
+    &.best {
+      img {
+        width: 114px;
+        height: 144px;
+      }
+    }
+    &.clean  {
+      img {
+        width: 155px;
+        height: 139px;
+      }
+    }
+    .infographics_item_text {
+      position: relative;
+      padding-top: 115px;
+      font-size: 15px;
+      line-height: 22px;
+      color: #fff;
+      font-weight: 400;
+      z-index: 2;
+    }
+}

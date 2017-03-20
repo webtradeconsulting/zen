@@ -73,16 +73,76 @@
     line-height: 72px; }
 
   .main_infographics .main_infographics_item.main_infographics_item_title h2:before {
-    content: none; } }
+    content: none; }
+
+  .contact_info {
+    position: static; }
+
+  .contact_form_wrap {
+    position: static; }
+
+  .contact_form .contact_form_title {
+    margin-bottom: 20px; }
+
+  .contact_form {
+    padding: 10px 20px 15px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0; }
+
+  .contact_form .form_field input[type="submit"] {
+    padding: 12px 22px;
+    margin-top: 15px;
+    font-size: 15px;
+    line-height: 19px; }
+
+  .footer {
+    padding-top: 10px; }
+
+  .footer_logo {
+    float: none;
+    width: 100%;
+    padding-right: 0;
+    padding-bottom: 20px;
+    margin-top: 0;
+    text-align: center; }
+    .footer_logo img {
+      width: 30%;
+      height: auto; }
+
+  .footer .footer_line {
+    display: none; }
+
+  .footer_nav_item {
+    float: none;
+    padding: 0;
+    text-align: center; }
+
+  .footer_nav_item .menu_title {
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #1d6994; }
+
+  .footer_social_stars {
+    float: none;
+    margin: 0 auto 15px; }
+
+  .footer_social_links {
+    float: none;
+    text-align: center;
+    padding-bottom: 20px; } }
 @media screen and (max-width: 768px) {
   .header .header_inner {
     padding-left: 10px; }
   .header .logo {
     height: 65px;
-    margin-top: 0; }
+    margin-top: 0;
+    background: url(../images/logo_circle.png) 50% 50% no-repeat/auto 100%;
+    top: 0; }
     .header .logo img {
-      width: auto;
-      height: 100%; }
+      width: 100px;
+      height: auto;
+      margin-top: 25px; }
   .header .header_phone {
     display: none;
     float: none;
@@ -112,6 +172,11 @@
   .content_container {
     padding-top: 30px;
     padding-bottom: 35px; }
+
+  h1.page_title span:before, .page_content .typorgraphy_title span:before {
+    top: 18px;
+    left: -33px;
+    width: 25px; }
 
   .page_content h1, .page_content h1.title_large {
     font-size: 24px;
@@ -329,6 +394,10 @@
   .main_infographics {
     padding: 20px 0; }
 
+  .main_infographics .main_infographics_item {
+    height: auto;
+    padding: 10px 15px; }
+
   .main_infographics .main_infographics_item.main_infographics_item_title {
     height: auto; }
 
@@ -338,8 +407,89 @@
     line-height: 42px;
     text-align: center; }
 
-  .footer_logo {
-    padding-right: 0; } }
+  .main_infographics .main_infographics_item span {
+    margin-top: 15px;
+    font-size: 19px;
+    line-height: 23px; }
+
+  .faq_title a {
+    padding: 10px 15px;
+    font-size: 16px;
+    line-height: 20px; }
+    .faq_title a:after {
+      width: 15px;
+      height: 7px;
+      margin-top: 8px;
+      background: url(../images/faq_arr_down.png) 50% 50% no-repeat/contain; }
+
+  .faq_item.active .faq_title a:after {
+    background: url(../images/faq_arr_up.png) 50% 50% no-repeat/contain; }
+
+  .faq_content {
+    padding: 0 20px 10px; }
+
+  .about_info_block {
+    margin-bottom: 30px; }
+
+  .about_info_block .about_img {
+    float: none;
+    width: 100%; }
+    .about_info_block .about_img img {
+      width: 100%;
+      height: auto; }
+
+  .about_info_block .about_info {
+    float: none;
+    width: 100%;
+    padding: 20px; }
+    .about_info_block .about_info h2 {
+      margin-bottom: 10px;
+      font-size: 20px;
+      line-height: 24px; }
+
+  .about_info_block:before {
+    bottom: -18px;
+    width: 80%;
+    margin-left: -40%; }
+
+  .about_text_block {
+    font-size: 15px;
+    line-height: 19px; }
+
+  .contact_info {
+    padding: 20px 0 0; }
+
+  .contact_info_item {
+    display: block;
+    padding-right: 0;
+    padding-bottom: 15px;
+    font-size: 15px;
+    line-height: 20px; }
+
+  .contact_info_item span {
+    font-size: 23px; }
+
+  .contact_form .contact_form_title {
+    margin-bottom: 10px;
+    font-size: 17px;
+    line-height: 21px;
+    text-align: center; }
+
+  .contact_form .form_field {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto 10px; }
+
+  .contact_form .form_field input, .contact_form .form_field textarea {
+    font-size: 15px;
+    line-height: 19px; }
+
+  .contact_form .form_field input[type="submit"] {
+    padding: 9px 22px; }
+
+  #wpgmza_map {
+    height: 280px !important; } }
 @media screen and (min-width: 1366px) {
   .header .header_menu {
     position: static;
