@@ -58,7 +58,40 @@ $(document).ready(function(){
         return false;
     });
 
+    AjaxContent.init({containerDiv:"#service_content",contentDiv:"#service_content"}).ajaxify_links(".services_sidebar a");
+
 });
+
+var AjaxContent = function(){
+    var container_div = '';
+    var content_div = '';
+    return {
+        getContent : function(url){
+            jQuery(container_div).animate({opacity:0},
+                function(){
+                    jQuery('#gif_loader').show();
+                    jQuery(container_div).load(url+" "+content_div,
+                        function(){
+                            jQuery(container_div).animate({opacity:1});
+                            jQuery('#gif_loader').hide();
+                        }
+                    );
+                });
+        },
+        ajaxify_links: function(elements){
+            jQuery(elements).click(function(){
+                AjaxContent.getContent(this.href);
+                history.pushState(null, null, this.href);
+                return false;
+            });
+        },
+        init: function(params){
+            container_div = params.containerDiv;
+            content_div = params.contentDiv;
+            return this;
+        }
+    }
+}();
 
 
 //Page Works on Load and Resize

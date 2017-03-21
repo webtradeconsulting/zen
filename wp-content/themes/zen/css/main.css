@@ -888,8 +888,9 @@ body.post-type-archive-services {
       line-height: 26px;
       color: #fff;
       font-weight: 400; }
-      .services_sidebar ul li.has_children li a:hover {
-        color: #00ffae; }
+      .services_sidebar ul li.has_children li a:hover, .services_sidebar ul li.has_children li a:active, .services_sidebar ul li.has_children li a:focus {
+        color: #00ffae;
+        text-decoration: none; }
     .services_sidebar ul li.has_children:hover > a {
       background-color: rgba(0, 186, 127, 0.4); }
 

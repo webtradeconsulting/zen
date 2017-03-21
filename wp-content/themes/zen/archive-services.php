@@ -5,15 +5,8 @@
     <div class="container content_container">
         <h1 class="page_title white_title"><span>Services</span></h1>
         <div class="row">
-            <div class="col-md-4">
-                <div class="services_sidebar_border">
-                    <div class="services_sidebar">
-                        <?php get_template_part('content', 'services_sidebar'); ?>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-8">
-                <div class="services_content">
+            <div class="col-md-8 pull-right">
+                <div class="services_content" id="service_content">
                     <h2>_ Commercial Kitchen Appliance Repair</h2>
                     <b>Expert Repair & Maintenance Services on Your Schedule</b>
                     <p>
@@ -63,6 +56,13 @@
                         We also offer upfront, flat-rate
                         pricing on all of our services, and we never charge for overtime.
                     </p>
+                </div>
+            </div>
+            <div class="col-md-4 pull-left">
+                <div class="services_sidebar_border">
+                    <div class="services_sidebar">
+                        <?php get_template_part('content', 'services_sidebar'); ?>
+                    </div>
                 </div>
             </div>
         </div>
