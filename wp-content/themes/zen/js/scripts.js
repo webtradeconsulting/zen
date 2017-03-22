@@ -60,6 +60,21 @@ $(document).ready(function(){
 
     AjaxContent.init({containerDiv:"#service_content",contentDiv:"#service_content"}).ajaxify_links(".services_sidebar a");
 
+    var service_links = $('.services_sidebar .has_children li a');
+    if (service_links.attr('href') == window.location.href) {
+
+    }
+
+    service_links.click(function() {
+        service_links.removeClass('active');
+        service_links.parent().parent().parent().removeClass('active');
+        if ($(this).attr('href') == window.location.href) {
+            $(this).addClass('active');
+            $(this).parent().parent().parent().addClass('active');
+        }
+    });
+
+
 });
 
 var AjaxContent = function(){

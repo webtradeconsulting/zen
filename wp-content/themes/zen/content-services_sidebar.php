@@ -28,6 +28,7 @@
                         'post_status' => 'publish',
                         'post_type' => 'services',
                         'posts_per_page' => -1,
+                        'order' => 'ASC',
                         'tax_query' => array(
                             array(
                                 'taxonomy' => 'service',

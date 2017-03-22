@@ -1,4 +1,4 @@
-body.post-type-archive-services {
+body.post-type-archive-services, body.single-services {
   background: url(../images/services_bg.jpg) 50% 50% no-repeat/cover;
 }
 .services_sidebar {
@@ -50,13 +50,13 @@ body.post-type-archive-services {
                 line-height: 26px;
                 color: #fff;
                 font-weight: 400;
-                  &:hover, &:active, &:focus {
+                  &:hover, &:active, &:focus, &.active {
                     color: #00ffae;
                     text-decoration: none;
                   }
               }
             }
-            &:hover {
+            &:hover, &.active {
               &>a {
                 background-color: rgba(0, 186, 127, 0.4);
               }
