@@ -268,7 +268,7 @@ h1.page_title, .page_content .typorgraphy_title {
   left: 0;
   width: 100%;
   background: #fff;
-  z-index: 10;
+  z-index: 1000;
   -webkit-box-shadow: 0 7px 29px 0 rgba(50, 50, 50, 0.55);
   -moz-box-shadow: 0 7px 29px 0 rgba(50, 50, 50, 0.55);
   box-shadow: 0 7px 29px 0 rgba(50, 50, 50, 0.55); }
@@ -291,7 +291,7 @@ h1.page_title, .page_content .typorgraphy_title {
     background: url(../images/header_line_sh.png); }
   .header .header_inner {
     max-height: 105px;
-    padding-left: 40px; }
+    padding-left: 15px; }
   .header .logo {
     float: left;
     height: 150px;
@@ -971,6 +971,22 @@ body.post-type-archive-services, body.single-services {
       color: #fff;
       font-weight: 400; }
 
+.services_content_block {
+  position: relative; }
+
+#gif_loader {
+  display: none;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  margin-left: -23px;
+  animation: loader 1s infinite; }
+
+@keyframes loader {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
 .services_infographics {
   padding: 100px 0;
   background: rgba(0, 0, 0, 0.4); }

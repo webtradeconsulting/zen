@@ -154,6 +154,25 @@ body.post-type-archive-services, body.single-services {
     }
   }
 }
+.services_content_block {
+  position: relative;
+}
+#gif_loader {
+  display: none;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  margin-left: -23px;
+  animation: loader 1s infinite;
+}
+@keyframes loader {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 .services_infographics {
   padding: 100px 0;

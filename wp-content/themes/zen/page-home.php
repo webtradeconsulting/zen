@@ -4,6 +4,7 @@
  */
 ?>
 <?php get_header(); ?>
+    <?php $wtc_homepage_settings = get_option('wtc_homepage_settings'); ?>
 		<div class="main_slider">
             <div class="main_call_master_block">
                 <div class="container">
@@ -11,20 +12,20 @@
                 </div>
             </div>
             <div class="main_slider_right">
-                <a href="#" class="main_slider_right_item">
-                    <i>Kitchen</i>
-                    <span>Whether you love to cook or just appreciate having modern conveniences, you know ...</span>
-                    <b href="#">→</b>
+                <a href="<?php echo stripslashes($wtc_homepage_settings['topform']['item1_link']); ?>" class="main_slider_right_item">
+                    <i><?php echo $wtc_homepage_settings['topform']['item1_title']; ?></i>
+                    <span><?php echo $wtc_homepage_settings['topform']['item1_text']; ?></span>
+                    <b>→</b>
                 </a>
-                <a href="#" class="main_slider_right_item">
-                    <i>Kitchen</i>
-                    <span>Whether you love to cook or just appreciate having modern conveniences, you know ...</span>
-                    <b href="#">→</b>
+                <a href="<?php echo stripslashes($wtc_homepage_settings['topform']['item2_link']); ?>" class="main_slider_right_item">
+                    <i><?php echo $wtc_homepage_settings['topform']['item2_title']; ?></i>
+                    <span><?php echo $wtc_homepage_settings['topform']['item2_text']; ?></span>
+                    <b>→</b>
                 </a>
-                <a href="#" class="main_slider_right_item">
-                    <i>Kitchen</i>
-                    <span>Whether you love to cook or just appreciate having modern conveniences, you know ...</span>
-                    <b href="#">→</b>
+                <a href="<?php echo stripslashes($wtc_homepage_settings['topform']['item3_link']); ?>" class="main_slider_right_item">
+                    <i><?php echo $wtc_homepage_settings['topform']['item3_title']; ?></i>
+                    <span><?php echo $wtc_homepage_settings['topform']['item3_text']; ?></span>
+                    <b>→</b>
                 </a>
             </div>
 		</div>
@@ -32,65 +33,29 @@
 			<div class="container">
 				<div class="col-md-4">
 					<div class="main_about_text">
-						<h2>Who we are</h2>
+						<h2><?php echo $wtc_homepage_settings['about']['title']; ?></h2>
 						<p>
-							This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-							Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-							sem nibh id elit.
-							Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
+                            <?php echo $wtc_homepage_settings['about']['text']; ?>
 						</p>
 					</div>
 				</div>
 				<div class="col-md-8">
 					<div class="row">
-						<div class="main_about_img col-md-4 col-sm-6 col-xs-12">
-							<img src="<?php bloginfo('template_url'); ?>/images/about-img1.jpg" alt="">
-							<a href="#" class="main_about_overlay main_slider_right_item">
-								<i>KITCHEN</i>
-								<span>Whether you love to cook or just appreciate having modern conveniences, you know ...</span>
-								<b href="#">→</b>
-							</a>
-						</div>
-						<div class="main_about_img col-md-4 col-sm-6 col-xs-12">
-							<img src="<?php bloginfo('template_url'); ?>/images/about-img2.jpg" alt="">
-							<a href="#" class="main_about_overlay main_slider_right_item">
-								<i>KITCHEN</i>
-								<span>Whether you love to cook or just appreciate having modern conveniences, you know ...</span>
-								<b href="#">→</b>
-							</a>
-						</div>
-						<div class="main_about_img col-md-4 col-sm-6 col-xs-12">
-							<img src="<?php bloginfo('template_url'); ?>/images/about-img3.jpg" alt="">
-							<a href="#" class="main_about_overlay main_slider_right_item">
-								<i>KITCHEN</i>
-								<span>Whether you love to cook or just appreciate having modern conveniences, you know ...</span>
-								<b href="#">→</b>
-							</a>
-						</div>
-						<div class="main_about_img col-md-4 col-sm-6 col-xs-12">
-							<img src="<?php bloginfo('template_url'); ?>/images/about-img4.jpg" alt="">
-							<a href="#" class="main_about_overlay main_slider_right_item">
-								<i>KITCHEN</i>
-								<span>Whether you love to cook or just appreciate having modern conveniences, you know ...</span>
-								<b href="#">→</b>
-							</a>
-						</div>
-						<div class="main_about_img col-md-4 col-sm-6 col-xs-12">
-							<img src="<?php bloginfo('template_url'); ?>/images/about-img5.jpg" alt="">
-							<a href="#" class="main_about_overlay main_slider_right_item">
-								<i>KITCHEN</i>
-								<span>Whether you love to cook or just appreciate having modern conveniences, you know ...</span>
-								<b href="#">→</b>
-							</a>
-						</div>
-						<div class="main_about_img col-md-4 col-sm-6 col-xs-12">
-							<img src="<?php bloginfo('template_url'); ?>/images/about-img6.jpg" alt="">
-							<a href="#" class="main_about_overlay main_slider_right_item">
-								<i>KITCHEN</i>
-								<span>Whether you love to cook or just appreciate having modern conveniences, you know ...</span>
-								<b href="#">→</b>
-							</a>
-						</div>
+                        <?php for ($i = 1; $i <=6; $i++) { ?>
+                            <div class="main_about_img col-md-4 col-sm-6 col-xs-12">
+                                <?php if(isset($wtc_homepage_settings['about']['image'.$i])) { ?>
+                                    <?php $image_src = wp_get_attachment_image_src($wtc_homepage_settings['about']['image'.$i]['image_id'], 'thumb'); ?>
+                                    <?php if(isset($image_src[0])) { ?>
+                                        <img src="<?php echo $image_src[0]; ?>" alt="<?php echo $wtc_homepage_settings['about']['about_item'.$i.'_title']; ?>" />
+                                    <?php } ?>
+                                <?php } ?>
+                                <a href="<?php echo stripslashes($wtc_homepage_settings['about']['about_item'.$i.'_link']); ?>" class="main_about_overlay main_slider_right_item">
+                                    <i><?php echo $wtc_homepage_settings['about']['about_item'.$i.'_title']; ?></i>
+                                    <span><?php echo $wtc_homepage_settings['about']['about_item'.$i.'_text']; ?></span>
+                                    <b>→</b>
+                                </a>
+                            </div>
+                        <?php } ?>
 					</div>
 				</div>
 			</div>

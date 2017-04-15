@@ -11,7 +11,6 @@
             <?php while (have_posts()) { the_post(); ?>
                 <div class="col-md-8 pull-right">
                     <div class="services_content" id="service_content">
-                        <div id="gif_loader"></div>
                         <h2><?php the_title(); ?></h2>
                         <?php the_content(); ?>
                     </div>
