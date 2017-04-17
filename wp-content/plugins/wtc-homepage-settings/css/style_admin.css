@@ -14,6 +14,11 @@
 	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.04);
 			box-shadow: 0 1px 1px rgba(0,0,0,.04);
 }
+.wtc_hs_bg:after {
+	content: '';
+	display: block;
+	clear: both;
+}
 
 .wtc_hs_semiblock {
 	float: left;
@@ -76,6 +81,44 @@ input.wtc_hs_field, textarea.wtc_hs_field, select.wtc_hs_field {
 }
 .wtc_hs_checkbox.active {
 	background-position: 0 -20px;
+}
+
+.wtc_hs_about_block_image {
+	float: left;
+	width: 20%;
+	margin-right: 2%;
+	text-align: center;
+}
+.wtc_hs_about_block_image img {
+	width: 100%;
+	height: auto;
+}
+.wtc_hs_row_container {
+	float: left;
+	width: 60%;
+}
+.clearfix .wtc_hs_semiblock:last-child {
+	margin-bottom: 2%;
+	margin-left: 0;
+}
+#qoute_text {
+	margin-bottom: 20px;
+}
+
+#tab_inf .wtc_hs_bg {
+	width: 19%;
+	float: left;
+	margin: .5%;
+}
+#tab_inf .wtc_hs_about_block_image {
+	width: 100%;
+	float: none;
+}
+#tab_inf .wtc_hs_about_block_image img {
+	width: auto;
+	max-height: 100px;
+	margin-bottom: 20px;
+	max-width: 100%;
 }
 
 

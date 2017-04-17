@@ -7,6 +7,7 @@
 <![endif]-->
 <!--[if !(IE 7) & !(IE 8)]><!-->
 <html <?php language_attributes(); ?>>
+<?php $wtc_communications = get_option('wtc_communications'); ?>
 <!--<![endif]-->
 <head>
     <meta charset="utf-8">
@@ -70,7 +71,7 @@
         </div>
         <div class="header_phone">
             <span>call now</span>
-            <a href="tel:+18009361520">(800) 936-1520</a>
+            <a href="tel:+1<?php echo wtc_generate_tel($wtc_communications['phone']); ?>"><?php echo $wtc_communications['phone']; ?></a>
         </div>
     </div>
 </header>

@@ -118,10 +118,16 @@ $btn_bg: #ec821b;
   }
   span {
     display: block;
+    display: -webkit-box;
+    height: 54px;
     margin: 0 0 60px;
     font-size: 14px;
     line-height: 18px;
     color: #bacdd8;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   b {
     display: inline-block;
@@ -184,6 +190,10 @@ $btn_bg: #ec821b;
     left: 0;
     width: 100%;
     height: 100%;
+    max-height: 100%;
+    max-height: calc(100% - 1px);
+    max-width: 100%;
+    max-width: calc(100% - 1px);
     padding: 25px 20px 20px;
     margin-top: 0;
     text-decoration: none;
@@ -379,6 +389,10 @@ $btn_bg: #ec821b;
       color: #004871;
       font-weight: 400;
       text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      -ms-text-overflow: ellipsis;
+      text-overflow: ellipsis;
     }
     &.main_infographics_item_title {
       background: #004871;

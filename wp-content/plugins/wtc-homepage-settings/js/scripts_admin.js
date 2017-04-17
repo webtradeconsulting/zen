@@ -215,6 +215,27 @@ jQuery(document).ready( function($) {
         });
     });
 
+    $('#tab_inf .wtc_hs_inf_image_select').each(function (j, elem) {
+        j = j+1;
+        console.log(j);
+        $('.wtc_hs_inf_image_select'+j).live('click', function(e) {
+            console.log($(this));
+            e.preventDefault();
+            var image = wp.media({
+                title: 'Upload Image',
+                multiple: false
+            }).open()
+                .on('select', function(e){
+                    var uploaded_image = image.state().get('selection').first();
+                    var imageID = uploaded_image.toJSON().id;
+                    var imageURL = uploaded_image.toJSON().url;
+                    $('.wtc_hs_inf_image_id'+j).val(imageID);
+                    $('.wtc_hs_inf_image_url'+j).val(imageURL);
+                    $('.wtc_hs_inf_image'+j).attr('src', imageURL);
+                });
+        });
+    });
+
 
 
 

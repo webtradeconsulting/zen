@@ -42,14 +42,18 @@
                     <div class="footer_social_stars">
 
                     </div>
-                    <div class="footer_social_links">
-                        <a href="#"><img src="<?php bloginfo('template_url'); ?>/images/fb-ic.png" alt=""></a>
-                        <a href="#"><img src="<?php bloginfo('template_url'); ?>/images/tw-ic.png" alt=""></a>
-                        <a href="#"><img src="<?php bloginfo('template_url'); ?>/images/li-ic.png" alt=""></a>
-                        <a href="#"><img src="<?php bloginfo('template_url'); ?>/images/yt-ic.png" alt=""></a>
-                        <a href="#"><img src="<?php bloginfo('template_url'); ?>/images/inst-ic.png" alt=""></a>
-                        <a href="#"><img src="<?php bloginfo('template_url'); ?>/images/yelp-ic.png" alt=""></a>
-                    </div>
+                    <?php $wtc_communications = get_option('wtc_communications'); ?>
+                    <?php if(isset($wtc_communications) && isset($wtc_communications['social'])) { ?>
+                        <div class="footer_social_links">
+                            <?php foreach($wtc_communications['social'] as $key=>$value) { ?>
+                                <?php if(isset($wtc_communications['social'][$key]['link']) && $wtc_communications['social'][$key]['show'] == 1) { ?>
+                                    <a href="<?php echo stripslashes($wtc_communications['social'][$key]['link']); ?>" target="_blank">
+                                        <img src="<?php bloginfo('template_url'); ?>/images/<?php echo $key; ?>-ic.png" width="22" alt="<?php echo $key; ?>"/>
+                                    </a>
+                                <?php } ?>
+                            <?php } ?>
+                        </div>
+                    <?php } ?>
                 </div>
             </div>
         </footer>

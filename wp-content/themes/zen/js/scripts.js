@@ -8,7 +8,6 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
   );
   document.querySelector('head').appendChild(msViewportStyle)
 }
-	
 $(document).ready(function(){
 	$('.selectpicker').selectpicker();
 
@@ -74,6 +73,20 @@ $(document).ready(function(){
         }
     });
 
+    //GoogleMaps nozoom
+    var googlemap = $('.googlemap');
+    googlemap.css("pointer-events", "none");
+
+    $('.map_block').click(function () {
+        $(this).find('.googlemap').css("pointer-events", "auto");
+        console.log(googlemap)
+    });
+    googlemap.mouseleave(function() {
+        googlemap.css("pointer-events", "none");
+    });
+
+
+
 
 });
 
@@ -111,8 +124,8 @@ var AjaxContent = function(){
 
 //Page Works on Load and Resize
 jQuery(window).load(function(){
-	
+
 });
 jQuery(window).resize(function() {
-	
+
 });

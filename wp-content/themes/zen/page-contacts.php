@@ -3,6 +3,7 @@
  * Template Name: Contacts Template
  */
 ?>
+<?php $wtc_communications = get_option('wtc_communications'); ?>
 <?php get_header(); ?>
 <div class="container content_container">
     <h1 class="page_title"><span><?php the_title(); ?></span></h1>
@@ -11,9 +12,9 @@
     <div class="contact_info">
         <div class="container">
             <?php
-                $contact_address = types_render_field('contact-address', array('output'=> 'raw'));
-                $contact_phone = types_render_field('contact-phone', array('output'=> 'raw'));
-                $contact_email = types_render_field('contact-email', array('output'=> 'raw'));
+                $contact_address = $wtc_communications['address'];
+                $contact_phone = $wtc_communications['phone'];
+                $contact_email = $wtc_communications['email'];
                 $contact_phone_href = str_replace(array('(', ')', '.', ' ', '-'), '', $contact_phone);
             ?>
             <?php if ($contact_address) { ?>
@@ -41,7 +42,9 @@
             <?php echo do_shortcode('[contact-form-7 id="42" title="Contact Us"]'); ?>
         </div>
     </div>
-    <?php echo do_shortcode('[wpgmza id="1"]'); ?>
+    <div class="googlemap">
+        <?php echo do_shortcode('[wpgmza id="1"]'); ?>
+    </div>
 </div>
 
 <?php get_footer(); ?>

@@ -33,15 +33,15 @@
 			<div class="container">
 				<div class="col-md-4">
 					<div class="main_about_text">
-						<h2><?php echo $wtc_homepage_settings['about']['title']; ?></h2>
+						<h2><?php echo stripslashes($wtc_homepage_settings['about']['title']); ?></h2>
 						<p>
-                            <?php echo $wtc_homepage_settings['about']['text']; ?>
+                            <?php echo stripslashes($wtc_homepage_settings['about']['text']); ?>
 						</p>
 					</div>
 				</div>
 				<div class="col-md-8">
 					<div class="row">
-                        <?php for ($i = 1; $i <=6; $i++) { ?>
+                        <?php for ($i = 1; $i <= 6; $i++) { ?>
                             <div class="main_about_img col-md-4 col-sm-6 col-xs-12">
                                 <?php if(isset($wtc_homepage_settings['about']['image'.$i])) { ?>
                                     <?php $image_src = wp_get_attachment_image_src($wtc_homepage_settings['about']['image'.$i]['image_id'], 'thumb'); ?>
@@ -63,11 +63,9 @@
 		<div class="main_help">
 			<div class="main_help_quote">
 				<div class="main_help_quote_text">
-					<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-						Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-						sem nibh id elit. </p>
+					<p><?php echo stripslashes($wtc_homepage_settings['quote']['text']); ?></p>
 					<div class="quote_footer">
-						<span>Kevin Green</span>
+						<span><?php echo stripslashes($wtc_homepage_settings['quote']['author']); ?></span>
 					</div>
 				</div>
 			</div>
@@ -95,26 +93,17 @@
 					<div class="col-sm-4 col-sm-6 col-xs-12 main_infographics_item main_infographics_item_title">
 						<h2>infographics</h2>
 					</div>
-					<div class="col-sm-4 col-sm-6 col-xs-12 main_infographics_item">
-						<img src="<?php bloginfo('template_url'); ?>/images/infographics1.png" alt="">
-						<span>Fast service</span>
-					</div>
-					<div class="col-sm-4 col-sm-6 col-xs-12 main_infographics_item">
-						<img src="<?php bloginfo('template_url'); ?>/images/infographics2.png" alt="">
-						<span>High quality</span>
-					</div>
-					<div class="col-sm-4 col-sm-6 col-xs-12 main_infographics_item">
-						<img src="<?php bloginfo('template_url'); ?>/images/infographics3.jpg" alt="">
-						<span>Experienced technicians</span>
-					</div>
-					<div class="col-sm-4 col-sm-6 col-xs-12 main_infographics_item">
-						<img src="<?php bloginfo('template_url'); ?>/images/infographics4.png" alt="">
-						<span>Fair pricing</span>
-					</div>
-					<div class="col-sm-4 col-sm-6 col-xs-12 main_infographics_item">
-						<img src="<?php bloginfo('template_url'); ?>/images/infographics5.png" alt="">
-						<span>Quality parts</span>
-					</div>
+                    <?php for ($i = 1; $i <=5; $i++) { ?>
+                        <?php if(isset($wtc_homepage_settings['infographics']['inf_image'.$i])) { ?>
+                            <?php $image_src_info = wp_get_attachment_image_src($wtc_homepage_settings['infographics']['inf_image'.$i]['inf_image_id'], 'thumb'); ?>
+                            <?php if(isset($image_src_info[0])) { ?>
+                                <div class="col-sm-4 col-sm-6 col-xs-12 main_infographics_item">
+                                    <img src="<?php echo $image_src_info[0]; ?>" alt="">
+                                    <span><?php echo $wtc_homepage_settings['infographics']['inf_item'.$i.'_title']; ?></span>
+                                </div>
+                            <?php } ?>
+                        <?php } ?>
+                    <?php } ?>
 				</div>
 			</div>
 		</div>
