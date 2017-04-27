@@ -59,12 +59,12 @@ $(document).ready(function(){
 
     AjaxContent.init({containerDiv:"#service_content",contentDiv:"#service_content"}).ajaxify_links(".services_sidebar a");
 
-    var service_links = document.querySelectorAll('.services_sidebar .has_children li');
+    var service_links = $('.services_sidebar .has_children li');
     /*for (var i = 0; i <= service_links.length; i++) {
-        console.log(service_links[i].childNodes.href);
+        console.log(service_links[i].childNodes.baseURI);
         if (service_links[i].childNodes.href == window.location.href) {
-            service_links[i].childNodes.setAttribute('class', 'active');
-            service_links[i].parentElement.setAttribute('class', 'active');
+            service_links[i].childNodes.addClass('active');
+            service_links[i].parents('.has_children').addClass('active');
         }
     }*/
 
