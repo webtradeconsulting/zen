@@ -223,7 +223,7 @@ function cut_string($str, $length, $postfix='...', $encoding='UTF-8') {
 function wtc_contact_form_change($wpcf7_data) {
     $submission = WPCF7_Submission::get_instance();
     if($submission) {
-        if($wpcf7_data->id == '42') { //Testimonials add to db
+        if($wpcf7_data->id() == '89') { //Testimonials add to db
             $testimonial_first_name = $_POST['your-name'];
             $testimonial_email = $_POST['your-email'];
             $testimonial_message = $_POST['your-message'];
@@ -232,12 +232,12 @@ function wtc_contact_form_change($wpcf7_data) {
                 'post_title' => $testimonial_first_name,
                 'post_content' => $testimonial_message,
                 'post_status' => 'draft',
-                'post_type' => 'testimonial',
+                'post_type' => 'testimonial'
             );
 
             $new_testimonials_id = wp_insert_post($new_testimonials);
 
-            add_post_meta($new_testimonials_id, 'wpcf-clients-author-email', $testimonial_email, true);
+            // add_post_meta($new_testimonials_id, 'wpcf-clients-author-email', $testimonial_email, true);
         }
     }
 }
