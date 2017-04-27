@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/reset.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/owl.carousel.css">
     <link rel='stylesheet' href="<?php bloginfo('template_url'); ?>/css/main.css" type="text/css" media='all' />
     <link rel='stylesheet' href="<?php bloginfo('template_url'); ?>/css/media.css" type="text/css" media='all' />
 
@@ -39,6 +40,7 @@
     <script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/libs/jquery.min.js'></script>
     <script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/libs/bootstrap.min.js'></script>
     <script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/bootstrap-select.min.js'></script>
+    <script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/owl.carousel.min.js'></script>
     <script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/scripts.js'></script>
 
     <!--[if lt IE 9]>
@@ -58,16 +60,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <nav class="header_menu navbar-collapse collapse">
-            <?php
-            if (has_nav_menu('top_menu')) :
-                wp_nav_menu(array('theme_location' => 'top_menu'));
-            endif;
-            ?>
-        </nav>
-        <div class="header_search">
-            <div class="header_search_open"><span class="glyphicon glyphicon-search"></span></div>
-            <?php echo get_search_form(); ?>
+        <div class="header_nav_block">
+            <nav class="header_menu navbar-collapse collapse">
+                <?php
+                if (has_nav_menu('top_menu')) :
+                    wp_nav_menu(array('theme_location' => 'top_menu'));
+                endif;
+                ?>
+            </nav>
+            <div class="header_search">
+                <div class="header_search_open"><span class="glyphicon glyphicon-search"></span></div>
+                <?php echo get_search_form(); ?>
+            </div>
         </div>
         <div class="header_phone">
             <span>call now</span>

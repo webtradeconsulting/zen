@@ -304,6 +304,8 @@ h1.page_title, .page_content .typorgraphy_title {
     top: 9px; }
     .header .logo img {
       margin-top: 68px; }
+  .header .header_nav_block {
+    padding-left: 20%; }
   .header .navbar-toggle {
     display: block;
     border-color: #515964;
@@ -865,7 +867,7 @@ h1.page_title, .page_content .typorgraphy_title {
   color: #94999c;
   text-align: center; }
 
-body.post-type-archive-services, body.single-services {
+body.post-type-archive-services, body.single-services, body.tax-service {
   background: url(../images/services_bg.jpg) 50% 50% no-repeat/cover; }
 
 .services_sidebar {
@@ -1001,6 +1003,52 @@ body.post-type-archive-services, body.single-services {
     transform: rotate(0); }
   100% {
     transform: rotate(360deg); } }
+.services_header {
+  padding: 35px 0 15px;
+  background: rgba(0, 186, 127, 0.6); }
+  .services_header .main_call_master_block.services_form {
+    float: right; }
+  .services_header .main_call_master_block label {
+    margin-bottom: 8px;
+    margin-right: 25px;
+    vertical-align: bottom;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase; }
+  .services_header .main_call_master_block .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 310px; }
+  .services_header .main_call_master_block .bootstrap-select .btn.dropdown-toggle {
+    font-size: 22px;
+    line-height: 26px;
+    color: #fff;
+    font-weight: 400;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #82b9d9;
+    border-radius: 0; }
+    .services_header .main_call_master_block .bootstrap-select .btn.dropdown-toggle:focus {
+      outline: none !important;
+      box-shadow: none !important; }
+  .services_header .main_call_btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-left: 40px;
+    font-size: 20px;
+    line-height: 24px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    background: #ec821b;
+    border: 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    transition: 0.2s; }
+    .services_header .main_call_btn:hover {
+      background: #f09c4a; }
+
 .services_infographics {
   padding: 100px 0;
   background: rgba(0, 0, 0, 0.4); }
@@ -1081,7 +1129,7 @@ body.post-type-archive-services, body.single-services {
   z-index: 10; }
 
 .contact_form {
-  padding: 20px 40px 30px;
+  padding: 20px 30px 25px;
   max-width: 1170px;
   margin: 0 auto;
   background: #2381b7;
@@ -1089,7 +1137,6 @@ body.post-type-archive-services, body.single-services {
   -moz-border-radius: 8px;
   border-radius: 8px; }
   .contact_form .contact_form_title {
-    margin-bottom: 40px;
     font-size: 22px;
     line-height: 30px;
     color: #fff;
@@ -1097,7 +1144,7 @@ body.post-type-archive-services, body.single-services {
   .contact_form .form_field {
     display: inline-block;
     width: 250px;
-    margin-right: 15px; }
+    margin-right: 25px; }
     .contact_form .form_field input, .contact_form .form_field textarea {
       display: inline-block;
       width: 100%;
@@ -1124,11 +1171,14 @@ body.post-type-archive-services, body.single-services {
         font-weight: 400; }
       .contact_form .form_field input:focus, .contact_form .form_field textarea:focus {
         border-color: #53b6ef; }
+    .contact_form .form_field.form_field_submit {
+      width: auto;
+      margin-right: 0; }
     .contact_form .form_field input[type="submit"] {
       width: auto;
-      padding: 16px 47px;
-      font-size: 18px;
-      line-height: 22px;
+      padding: 13px 49px;
+      font-size: 17px;
+      line-height: 21px;
       color: #336d8d;
       text-transform: uppercase;
       font-weight: 500;
@@ -1145,12 +1195,11 @@ body.post-type-archive-services, body.single-services {
 
 .testimonials_item {
   position: relative;
-  width: 33%;
-  padding: 0 15px; }
+  padding-top: 40px; }
   .testimonials_item:after {
     content: '';
     position: absolute;
-    top: 20px;
+    top: 60px;
     right: 35px;
     display: block;
     width: 43px;
@@ -1166,7 +1215,7 @@ body.post-type-archive-services, body.single-services {
   .testimonials_item .testimonials_avatar {
     position: absolute;
     left: 40px;
-    top: -40px;
+    top: 0;
     width: 80px;
     height: 80px;
     background: #2f6583 url(../images/default-avatar.png) 50% 50% no-repeat;
@@ -1192,20 +1241,6 @@ body.post-type-archive-services, body.single-services {
 
 .testimonials_form_wrap {
   position: static; }
-  .testimonials_form_wrap .contact_form {
-    padding: 20px 30px 25px; }
-  .testimonials_form_wrap .contact_form_title {
-    margin-bottom: 0; }
-  .testimonials_form_wrap .form_field {
-    margin-right: 25px; }
-
-.form_field_submit.form_field {
-  width: auto;
-  margin-right: 0; }
-  .form_field_submit.form_field input[type="submit"] {
-    padding: 13px 49px;
-    font-size: 17px;
-    line-height: 21px; }
 
 body.page-template-page-faq {
   background: url(../images/faq_bg.jpg) 50% 50% no-repeat/cover; }

@@ -59,10 +59,14 @@ $(document).ready(function(){
 
     AjaxContent.init({containerDiv:"#service_content",contentDiv:"#service_content"}).ajaxify_links(".services_sidebar a");
 
-    var service_links = $('.services_sidebar .has_children li a');
-    if (service_links.attr('href') == window.location.href) {
-
-    }
+    var service_links = document.querySelectorAll('.services_sidebar .has_children li');
+    /*for (var i = 0; i <= service_links.length; i++) {
+        console.log(service_links[i].childNodes.href);
+        if (service_links[i].childNodes.href == window.location.href) {
+            service_links[i].childNodes.setAttribute('class', 'active');
+            service_links[i].parentElement.setAttribute('class', 'active');
+        }
+    }*/
 
     service_links.click(function() {
         service_links.removeClass('active');
@@ -85,8 +89,14 @@ $(document).ready(function(){
         googlemap.css("pointer-events", "none");
     });
 
-
-
+    $('.testimonials_items').owlCarousel({
+        loop:true,
+        items: 3,
+        margin: 30,
+        nav: false,
+        navText: ['<span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>','<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>'],
+        dots: true
+    });
 
 });
 

@@ -9,7 +9,7 @@
 
     <div class="container content_container">
         <h1 class="page_title white_title"><span><?php the_title(); ?></span></h1>
-        <div class="testimonials_items row">
+        <div class="testimonials_items owl-carousel">
             <?php
             $loop = new WP_Query( //First select only main event
                 array(

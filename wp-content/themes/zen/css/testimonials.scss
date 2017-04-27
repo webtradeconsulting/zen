@@ -3,12 +3,11 @@
 }
 .testimonials_item {
   position: relative;
-  width: 33%;
-  padding: 0 15px;
+  padding-top: 40px;
     &:after {
       content: '';
       position: absolute;
-      top: 20px;
+      top: 60px;
       right: 35px;
       display: block;
       width: 43px;
@@ -26,7 +25,7 @@
     .testimonials_avatar {
       position: absolute;
       left: 40px;
-      top: -40px;
+      top: 0;
       width: 80px;
       height: 80px;
       background: #2f6583 url(../images/default-avatar.png) 50% 50% no-repeat;
@@ -55,24 +54,4 @@
 }
 .testimonials_form_wrap {
   position: static;
-  .contact_form {
-    padding: 20px 30px 25px;
-  }
-  .contact_form_title {
-    margin-bottom: 0;
-  }
-  .form_field {
-    margin-right: 25px;
-  }
-}
-.form_field_submit {
-  &.form_field {
-    width: auto;
-    margin-right: 0;
-    input[type="submit"] {
-      padding: 13px 49px;
-      font-size: 17px;
-      line-height: 21px
-    }
-  }
 }
