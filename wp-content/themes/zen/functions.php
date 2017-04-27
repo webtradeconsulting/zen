@@ -219,6 +219,30 @@ function cut_string($str, $length, $postfix='...', $encoding='UTF-8') {
 	return mb_substr($tmp, 0, mb_strripos($tmp, ' ', 0, $encoding), $encoding) . $postfix;
 }
 
+//Contact Form 7 integration
+function wtc_contact_form_change($wpcf7_data) {
+    $submission = WPCF7_Submission::get_instance();
+    if($submission) {
+        if($wpcf7_data->id == '42') { //Testimonials add to db
+            $testimonial_first_name = $_POST['your-name'];
+            $testimonial_email = $_POST['your-email'];
+            $testimonial_message = $_POST['your-message'];
+
+            $new_testimonials = array(
+                'post_title' => $testimonial_first_name,
+                'post_content' => $testimonial_message,
+                'post_status' => 'draft',
+                'post_type' => 'testimonial',
+            );
+
+            $new_testimonials_id = wp_insert_post($new_testimonials);
+
+            add_post_meta($new_testimonials_id, 'wpcf-clients-author-email', $testimonial_email, true);
+        }
+    }
+}
+add_action('wpcf7_before_send_mail', 'wtc_contact_form_change', 1);
+
 
 //Protect email
 function wtc_protect_email($address, $before_text) {

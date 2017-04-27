@@ -1140,6 +1140,73 @@ body.post-type-archive-services, body.single-services {
       .contact_form .form_field input[type="submit"]:hover, .contact_form .form_field input[type="submit"]:focus {
         background: #cce3ef; }
 
+.page-id-87 {
+  background: url(../images/testimonials_bg.jpg) 50% 50% no-repeat/cover; }
+
+.testimonials_item {
+  position: relative;
+  width: 33%;
+  padding: 0 15px; }
+  .testimonials_item:after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    display: block;
+    width: 43px;
+    height: 30px;
+    background: url(../images/testimonials_quotes.png) 50% 50% no-repeat; }
+  .testimonials_item .testimonials_item_inner {
+    padding: 60px 30px 30px;
+    background: rgba(120, 152, 154, 0.4);
+    border: 1px solid rgba(122, 146, 148, 0.6);
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px; }
+  .testimonials_item .testimonials_avatar {
+    position: absolute;
+    left: 40px;
+    top: -40px;
+    width: 80px;
+    height: 80px;
+    background: #2f6583 url(../images/default-avatar.png) 50% 50% no-repeat;
+    border: 1px solid #49687b;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%; }
+  .testimonials_item .testimonials_title {
+    padding-bottom: 20px;
+    font-size: 18px;
+    line-height: 22px;
+    color: #fff;
+    font-weight: 400; }
+  .testimonials_item .testimonials_text {
+    font-size: 14px;
+    line-height: 20px;
+    color: #b2c1ca;
+    font-style: italic; }
+
+.testimonials_form_block {
+  padding: 100px 0;
+  background: rgba(0, 0, 0, 0.4); }
+
+.testimonials_form_wrap {
+  position: static; }
+  .testimonials_form_wrap .contact_form {
+    padding: 20px 30px 25px; }
+  .testimonials_form_wrap .contact_form_title {
+    margin-bottom: 0; }
+  .testimonials_form_wrap .form_field {
+    margin-right: 25px; }
+
+.form_field_submit.form_field {
+  width: auto;
+  margin-right: 0; }
+  .form_field_submit.form_field input[type="submit"] {
+    padding: 13px 49px;
+    font-size: 17px;
+    line-height: 21px; }
+
 body.page-template-page-faq {
   background: url(../images/faq_bg.jpg) 50% 50% no-repeat/cover; }
 
