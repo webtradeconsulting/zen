@@ -176,10 +176,12 @@ body.post-type-archive-services, body.single-services, body.tax-service {
 
 .services_header {
   padding: 35px 0 15px;
+  text-align: center;
   background: rgba(0, 186, 127, 0.6);
   .main_call_master_block {
     &.services_form {
-      float: right;
+      //float: right;
+      display: inline-block;
     }
     label {
       margin-bottom: 8px;

@@ -7,7 +7,7 @@
                 <div class="footer_nav">
                     <nav>
                         <div class="footer_nav_item">
-                            <div class="menu_title">About us</div>
+<!--                            <div class="menu_title">About us</div>-->
                             <ul>
                                 <?php
                                 if (has_nav_menu('footer_menu_1')) :
@@ -17,7 +17,7 @@
                             </ul>
                         </div>
                         <div class="footer_nav_item">
-                            <div class="menu_title">Testimonials</div>
+<!--                            <div class="menu_title">Testimonials</div>-->
                             <ul>
                                 <?php
                                 if (has_nav_menu('footer_menu_2')) :
@@ -27,7 +27,7 @@
                             </ul>
                         </div>
                         <div class="footer_nav_item">
-                            <div class="menu_title">Privacy policy</div>
+<!--                            <div class="menu_title">Privacy policy</div>-->
                             <ul>
                                 <?php
                                 if (has_nav_menu('footer_menu_3')) :
@@ -39,9 +39,7 @@
                     </nav>
                 </div>
                 <div class="footer_social">
-                    <div class="footer_social_stars">
-
-                    </div>
+                    <a href="/testimonials" class="footer_social_stars"></a>
                     <?php $wtc_communications = get_option('wtc_communications'); ?>
                     <?php if(isset($wtc_communications) && isset($wtc_communications['social'])) { ?>
                         <div class="footer_social_links">

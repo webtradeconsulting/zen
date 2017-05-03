@@ -529,18 +529,6 @@ h1.page_title, .page_content .typorgraphy_title {
     color: #fff;
     text-align: left;
     font-style: normal; }
-    .main_slider_right_item i:after {
-      content: '';
-      display: block;
-      float: right;
-      width: 18px;
-      height: 18px;
-      margin-top: 2px;
-      background: #fff;
-      opacity: 0.4;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      border-radius: 50%; }
   .main_slider_right_item span {
     display: block;
     display: -webkit-box;
@@ -789,16 +777,16 @@ h1.page_title, .page_content .typorgraphy_title {
       background: #004871; }
       .main_infographics .main_infographics_item.main_infographics_item_title h2 {
         position: relative;
-        padding: 13px 50px 10px 115px;
+        padding: 41px 50px 10px 115px;
         margin: 0;
-        font-size: 72px;
-        line-height: 76px;
+        font-size: 32px;
+        line-height: 56px;
         color: #fff;
         text-align: left; }
         .main_infographics .main_infographics_item.main_infographics_item_title h2:before {
           content: '';
           position: absolute;
-          top: 50%;
+          top: 58%;
           left: 50px;
           width: 35px;
           height: 1px;
@@ -1005,9 +993,10 @@ body.post-type-archive-services, body.single-services, body.tax-service {
     transform: rotate(360deg); } }
 .services_header {
   padding: 35px 0 15px;
+  text-align: center;
   background: rgba(0, 186, 127, 0.6); }
   .services_header .main_call_master_block.services_form {
-    float: right; }
+    display: inline-block; }
   .services_header .main_call_master_block label {
     margin-bottom: 8px;
     margin-right: 25px;

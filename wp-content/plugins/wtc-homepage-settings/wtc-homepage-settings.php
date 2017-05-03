@@ -170,6 +170,10 @@ function wtc_homesettings() {
 				</div>
 				
 				<div class="wtc_hs_tab" id="tab_inf">
+                    <div class="wtc_hs_row">
+                        <label for="inf_title">Infographics title</label>
+                        <input type="text" id="inf_title" class="wtc_hs_field" name="wtc_homepage_settings[infographics][title]" value="<?php echo (isset($wtc_homepage_settings['infographics']['title'])) ? stripslashes($wtc_homepage_settings['infographics']['title']) : '' ?>"/>
+                    </div>
                     <?php for ($i = 1; $i <= 5; $i++) { ?>
                         <div class="wtc_hs_block wtc_hs_bg wtc_hs_about_block">
                             <?php
@@ -184,10 +188,36 @@ function wtc_homesettings() {
                                 <input type="hidden" class="wtc_hs_inf_image_id<?php echo $i ?>" name="wtc_homepage_settings[infographics][inf_image<?php echo $i ?>][inf_image_id]" value="<?php echo (isset($wtc_homepage_settings['infographics']['inf_image'.$i]['inf_image_id'])) ? stripslashes($wtc_homepage_settings['infographics']['inf_image'.$i]['inf_image_id']) : '' ; ?>" />
                                 <input type="hidden" class="wtc_hs_inf_image_url<?php echo $i ?>" name="wtc_homepage_settings[infographics][inf_image<?php echo $i ?>][inf_image_url]" value="<?php echo (isset($wtc_homepage_settings['infographics']['inf_image'.$i]['inf_image_url'])) ? stripslashes($wtc_homepage_settings['infographics']['inf_image'.$i]['inf_image_url']) : '' ; ?>" />
                             </div>
-                            .
+                            <br>
                             <div class="wtc_hs_row">
                                 <label for="inf_item<?php echo $i ?>_title">Title for <?php echo $i ?> item</label>
                                 <input type="text" id="inf_item<?php echo $i ?>_title" class="wtc_hs_field" name="wtc_homepage_settings[infographics][inf_item<?php echo $i ?>_title]" value="<?php echo (isset($wtc_homepage_settings['infographics']['inf_item'.$i.'_title'])) ? stripslashes($wtc_homepage_settings['infographics']['inf_item'.$i.'_title']) : '' ?>" placeholder="for example - Kitchen"/>
+                            </div>
+                        </div>
+                    <?php } ?>
+                    <br>
+                    <br>
+                    <div class="wtc_hs_row" style="padding-top: 245px">
+                        <label>Services inforgraphics</label>
+                    </div>
+                    <?php for ($i = 1; $i <= 4; $i++) { ?>
+                        <div class="wtc_hs_block wtc_hs_bg wtc_hs_about_block">
+                            <?php
+                            if(isset($wtc_homepage_settings['service_infographics']['service_inf_image'.$i])) {
+                                $services_image_src = wp_get_attachment_image_src($wtc_homepage_settings['service_infographics']['service_inf_image'.$i]['service_inf_image_id'], 'thumb');
+                            }
+                            ?>
+                            <div class="wtc_hs_about_block_image">
+                                <img src="<?php echo (isset($services_image_src[0])) ? $services_image_src[0] : $default_image ; ?>" class="wtc_hs_service_inf_image<?php echo $i ?>" /><br />
+                                <a href="#" class="button-secondary wtc_hs_service_inf_image_select wtc_hs_service_inf_image_select<?php echo $i ?>">Select image</a>
+
+                                <input type="hidden" class="wtc_hs_service_inf_image_id<?php echo $i ?>" name="wtc_homepage_settings[service_infographics][service_inf_image<?php echo $i ?>][service_inf_image_id]" value="<?php echo (isset($wtc_homepage_settings['service_infographics']['service_inf_image'.$i]['service_inf_image_id'])) ? stripslashes($wtc_homepage_settings['service_infographics']['service_inf_image'.$i]['service_inf_image_id']) : '' ; ?>" />
+                                <input type="hidden" class="wtc_hs_service_inf_image_url<?php echo $i ?>" name="wtc_homepage_settings[service_infographics][service_inf_image<?php echo $i ?>][service_inf_image_url]" value="<?php echo (isset($wtc_homepage_settings['service_infographics']['service_inf_image'.$i]['service_inf_image_url'])) ? stripslashes($wtc_homepage_settings['service_infographics']['service_inf_image'.$i]['service_inf_image_url']) : '' ; ?>" />
+                            </div>
+                            <br>
+                            <div class="wtc_hs_row">
+                                <label for="inf_item<?php echo $i ?>_text">Text for <?php echo $i ?> item</label>
+                                <textarea type="text" id="inf_item<?php echo $i ?>_text" class="wtc_hs_field" name="wtc_homepage_settings[service_infographics][service_inf_item<?php echo $i ?>_text]"><?php echo (isset($wtc_homepage_settings['service_infographics']['service_inf_item'.$i.'_text'])) ? stripslashes($wtc_homepage_settings['service_infographics']['service_inf_item'.$i.'_text']) : '' ?></textarea>
                             </div>
                         </div>
                     <?php } ?>
@@ -195,7 +225,7 @@ function wtc_homesettings() {
 
 			</div>
 			
-			<hr/>
+			<hr style="clear: both;" />
 			<input type="submit" value="Save Settings" class="button-primary wtc_hs_save_button" />
 		</form>
 	</div>

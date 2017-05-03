@@ -91,7 +91,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-4 col-sm-6 col-xs-12 main_infographics_item main_infographics_item_title">
-						<h2>infographics</h2>
+						<h2><?php echo $wtc_homepage_settings['infographics']['title']; ?></h2>
 					</div>
                     <?php for ($i = 1; $i <=5; $i++) { ?>
                         <?php if(isset($wtc_homepage_settings['infographics']['inf_image'.$i])) { ?>

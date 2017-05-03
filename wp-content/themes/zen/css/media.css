@@ -493,7 +493,7 @@
 @media screen and (min-width: 1366px) {
   .header .header_menu {
     position: static;
-    float: left;
+    float: right;
     width: auto;
     margin-right: 25px;
     padding: 0; }
@@ -532,8 +532,9 @@
     opacity: 1;
     margin-top: 87px; }
   .header .header_search {
-    float: left;
-    position: static; }
+    float: right;
+    position: static;
+    margin-right: 30px; }
     .header .header_search.active .header_search_form {
       display: block; }
 

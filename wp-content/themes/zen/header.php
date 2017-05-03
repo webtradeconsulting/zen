@@ -61,6 +61,14 @@
             <span class="icon-bar"></span>
         </button>
         <div class="header_nav_block">
+            <div class="header_phone">
+                <span>call now</span>
+                <a href="tel:+1<?php echo wtc_generate_tel($wtc_communications['phone']); ?>"><?php echo $wtc_communications['phone']; ?></a>
+            </div>
+            <div class="header_search">
+                <div class="header_search_open"><span class="glyphicon glyphicon-search"></span></div>
+                <?php echo get_search_form(); ?>
+            </div>
             <nav class="header_menu navbar-collapse collapse">
                 <?php
                 if (has_nav_menu('top_menu')) :
@@ -68,15 +76,8 @@
                 endif;
                 ?>
             </nav>
-            <div class="header_search">
-                <div class="header_search_open"><span class="glyphicon glyphicon-search"></span></div>
-                <?php echo get_search_form(); ?>
-            </div>
         </div>
-        <div class="header_phone">
-            <span>call now</span>
-            <a href="tel:+1<?php echo wtc_generate_tel($wtc_communications['phone']); ?>"><?php echo $wtc_communications['phone']; ?></a>
-        </div>
+
     </div>
 </header>
 <?php  if( !is_front_page() and function_exists('yoast_breadcrumb') ) {

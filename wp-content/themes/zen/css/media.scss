@@ -522,7 +522,7 @@
   .header {
     .header_menu {
       position: static;
-      float: left;
+      float: right;
       width: auto;
       margin-right: 25px;
       padding: 0;
@@ -570,8 +570,9 @@
       margin-top: 87px;
     }
     .header_search {
-      float: left;
+      float: right;
       position: static;
+      margin-right: 30px;
         &.active {
           .header_search_form {
             display: block;
