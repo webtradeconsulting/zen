@@ -11,6 +11,10 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
 $(document).ready(function(){
 	$('.selectpicker').selectpicker();
 
+	$('.main_slider_arrow').click(function () {
+        $('html, body').animate({scrollTop: $('.main_about').offset().top - $('header').outerHeight()}, 400);
+    });
+
     //404 page open
     $('.not_found_search a').click(function() {
         if($('.not_found_search form').is(':visible')) {
@@ -60,13 +64,6 @@ $(document).ready(function(){
     AjaxContent.init({containerDiv:"#service_content",contentDiv:"#service_content"}).ajaxify_links(".services_sidebar a");
 
     var service_links = $('.services_sidebar .has_children li');
-    /*for (var i = 0; i <= service_links.length; i++) {
-        console.log(service_links[i].childNodes.baseURI);
-        if (service_links[i].childNodes.href == window.location.href) {
-            service_links[i].childNodes.addClass('active');
-            service_links[i].parents('.has_children').addClass('active');
-        }
-    }*/
 
     service_links.click(function() {
         service_links.removeClass('active');
@@ -75,6 +72,10 @@ $(document).ready(function(){
             $(this).addClass('active');
             $(this).parent().parent().parent().addClass('active');
         }
+    });
+
+    $('#master_call').change(function() {
+        $('.main_call_master_block a').attr('href').append('?ref=' + $('#master_call option').val());
     });
 
     //GoogleMaps nozoom

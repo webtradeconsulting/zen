@@ -8,7 +8,22 @@
 		<div class="main_slider">
             <div class="main_call_master_block">
                 <div class="container">
-                    <?php echo do_shortcode('[contact-form-7 id="43" title="Main Slider Form"]'); ?>
+                    <?php
+                        $label = $wtc_homepage_settings['topform']['label'];
+                        $options = $wtc_homepage_settings['topform']['select'];
+                        $options_array = explode(PHP_EOL, $options);
+                        $btn_text = $wtc_homepage_settings['topform']['btn_text'];
+                        $btn_link = $wtc_homepage_settings['topform']['btn_link'];
+                    ?>
+                    <div class="main_call_master_field">
+                        <label for="master_call"><?php echo $label; ?></label>
+                        <select id="master_call" class="selectpicker">
+                            <?php for ($i = 0; $i < sizeof($options_array); $i++) { ?>
+                                <option value="<?php echo $options_array[$i]; ?>"><?php echo $options_array[$i]; ?></option>
+                            <?php } ?>
+                        </select>
+                        <a href="<?php echo $btn_link; ?>" class="main_call_btn"><?php echo $btn_text; ?></a>
+                    </div>
                 </div>
             </div>
             <div class="main_slider_right">
@@ -28,6 +43,7 @@
                     <b>→</b>
                 </a>
             </div>
+            <div class="main_slider_arrow"></div>
 		</div>
 		<div class="main_about">
 			<div class="container">

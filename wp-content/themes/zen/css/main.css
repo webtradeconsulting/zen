@@ -411,7 +411,7 @@ h1.page_title, .page_content .typorgraphy_title {
     float: right;
     width: 257px;
     height: 100%;
-    padding: 8px 20px 25px;
+    padding: 8px 20px 29px;
     text-align: center;
     background: #00ba7f;
     position: relative;
@@ -504,6 +504,21 @@ h1.page_title, .page_content .typorgraphy_title {
   right: 0;
   height: 100%;
   max-height: 240px; }
+
+.main_slider_arrow {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  width: 30px;
+  height: 52px;
+  margin-left: -15px;
+  background: url(../images/slider_arrow.png) 50% 50% no-repeat/100%;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  transition: 0.2s; }
+  .main_slider_arrow:hover {
+    transform: scale(1.2); }
 
 .main_slider_right_item {
   float: left;
@@ -1074,6 +1089,13 @@ body.post-type-archive-services, body.single-services, body.tax-service {
     color: #fff;
     font-weight: 400;
     z-index: 2; }
+
+.help_form .request_form .main_form_field {
+  display: block;
+  float: none; }
+
+.help_form .request_form .main_form_field label {
+  width: 210px; }
 
 .map_block {
   position: relative; }

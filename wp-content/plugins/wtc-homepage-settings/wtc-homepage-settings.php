@@ -66,6 +66,24 @@ function wtc_homesettings() {
 				
 				<div class="wtc_hs_tab" id="tab_topform">
 					<div class="clearfix">
+                        <div class="wtc_hs_block wtc_hs_bg">
+                            <div class="wtc_hs_row">
+                                <label for="label">Label for select field</label>
+                                <input type="text" id="label" class="wtc_hs_field" name="wtc_homepage_settings[topform][label]" placeholder="for example - Washing machine" value="<?php echo (isset($wtc_homepage_settings['topform']['label'])) ? stripslashes($wtc_homepage_settings['topform']['label']) : '' ; ?>" />
+                            </div>
+                            <div class="wtc_hs_row">
+                                <label for="select">Select options (one option for one line)</label>
+                                <textarea type="text" id="select" class="wtc_hs_field" name="wtc_homepage_settings[topform][select]" placeholder="for example - Washing machine"><?php echo (isset($wtc_homepage_settings['topform']['select'])) ? stripslashes($wtc_homepage_settings['topform']['select']) : '' ; ?></textarea>
+                            </div>
+                            <div class="wtc_hs_row">
+                                <label for="btn_text">Button text</label>
+                                <input type="text" id="btn_text" class="wtc_hs_field" name="wtc_homepage_settings[topform][btn_text]" placeholder="for example - Washing machine" value="<?php echo (isset($wtc_homepage_settings['topform']['btn_text'])) ? stripslashes($wtc_homepage_settings['topform']['btn_text']) : '' ; ?>" />
+                            </div>
+                            <div class="wtc_hs_row">
+                                <label for="btn_link">Button link</label>
+                                <input type="text" id="btn_link" class="wtc_hs_field" name="wtc_homepage_settings[topform][btn_link]" placeholder="for example - Washing machine" value="<?php echo (isset($wtc_homepage_settings['topform']['btn_link'])) ? stripslashes($wtc_homepage_settings['topform']['btn_link']) : '' ; ?>" />
+                            </div>
+                        </div>
 						<div class="wtc_hs_block wtc_hs_bg">
 							<div class="wtc_hs_row">
 								<label for="item1_title">First item title</label>

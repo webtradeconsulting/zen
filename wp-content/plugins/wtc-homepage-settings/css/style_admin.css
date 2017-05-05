@@ -250,4 +250,6 @@ td.wtc_hs_posts_body {
 .wtc_hs_about_image_box input {
 	display: none;
 }
-
+#select.wtc_hs_field {
+	height: 150px;
+}

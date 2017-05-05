@@ -285,3 +285,10 @@ body.post-type-archive-services, body.single-services, body.tax-service {
       z-index: 2;
     }
 }
+.help_form .request_form .main_form_field {
+  display: block;
+  float: none;
+}
+.help_form .request_form .main_form_field label {
+  width: 210px;
+}

@@ -244,6 +244,7 @@ function wtc_contact_form_change($wpcf7_data) {
 add_action('wpcf7_before_send_mail', 'wtc_contact_form_change', 1);
 
 
+
 //Protect email
 function wtc_protect_email($address, $before_text) {
 	$address = strtolower($address);
