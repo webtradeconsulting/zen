@@ -55,3 +55,20 @@
 .testimonials_form_wrap {
   position: static;
 }
+.testimonials_items .owl-next, .testimonials_items .owl-prev {
+  position: absolute;
+  top: 50%;
+  margin-top: -26px;
+  font-size: 34px;
+  line-height: 54px;
+  color: rgba(255, 255, 255, 0.6);
+   &:hover {
+     color: rgba(255, 255, 255, 1);
+   }
+}
+.testimonials_items .owl-next {
+  right: -35px;
+}
+.testimonials_items .owl-prev {
+  left: -35px;
+}

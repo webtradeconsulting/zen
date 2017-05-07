@@ -49,9 +49,10 @@
 			<div class="container">
 				<div class="col-md-4">
 					<div class="main_about_text">
-						<h2><?php echo stripslashes($wtc_homepage_settings['about']['title']); ?></h2>
+						<h2><a href="<?php the_permalink(35); ?>"><?php echo stripslashes($wtc_homepage_settings['about']['title']); ?></a></h2>
 						<p>
-                            <?php echo stripslashes($wtc_homepage_settings['about']['text']); ?>
+                            <?php echo stripslashes($wtc_homepage_settings['about']['text']); ?> <br>
+                            <a href="<?php the_permalink(35); ?>" class="about_link">Read More</a>
 						</p>
 					</div>
 				</div>
@@ -59,17 +60,25 @@
 					<div class="row">
                         <?php for ($i = 1; $i <= 6; $i++) { ?>
                             <div class="main_about_img col-md-4 col-sm-6 col-xs-12">
+                                <?php $image_src = wp_get_attachment_image_src($wtc_homepage_settings['about']['image'.$i]['image_id'], 'thumb'); ?>
                                 <?php if(isset($wtc_homepage_settings['about']['image'.$i])) { ?>
-                                    <?php $image_src = wp_get_attachment_image_src($wtc_homepage_settings['about']['image'.$i]['image_id'], 'thumb'); ?>
                                     <?php if(isset($image_src[0])) { ?>
                                         <img src="<?php echo $image_src[0]; ?>" alt="<?php echo $wtc_homepage_settings['about']['about_item'.$i.'_title']; ?>" />
                                     <?php } ?>
                                 <?php } ?>
+                                <?php if ($wtc_homepage_settings['about']['about_item'.$i.'_link']) { ?>
                                 <a href="<?php echo stripslashes($wtc_homepage_settings['about']['about_item'.$i.'_link']); ?>" class="main_about_overlay main_slider_right_item">
                                     <i><?php echo $wtc_homepage_settings['about']['about_item'.$i.'_title']; ?></i>
                                     <span><?php echo $wtc_homepage_settings['about']['about_item'.$i.'_text']; ?></span>
                                     <b>→</b>
                                 </a>
+                                <?php } else { ?>
+                                    <a href="<?php echo $image_src[0]; ?>" data-src="<?php echo $image_src[0]; ?>" class="main_about_overlay main_about_overlay_gallery main_slider_right_item ">
+                                        <i><?php echo $wtc_homepage_settings['about']['about_item'.$i.'_title']; ?></i>
+                                        <span><?php echo $wtc_homepage_settings['about']['about_item'.$i.'_text']; ?></span>
+                                        <b>→</b>
+                                    </a>
+                                <?php } ?>
                             </div>
                         <?php } ?>
 					</div>
@@ -85,21 +94,15 @@
 					</div>
 				</div>
 			</div>
+            <?php
+                $request_title = $wtc_homepage_settings['request']['title'];
+                $request_btn_text = $wtc_homepage_settings['request']['btn_title'];
+                $request_btn_link = $wtc_homepage_settings['request']['btn_link'];
+            ?>
 			<div class="container main_help_container">
 				<div class="help_form">
-					<h2>How can we help?</h2>
-					<form action="">
-						<div class="main_form_field">
-							<label for="main_email">your email</label>
-							<input id="main_email" type="email">
-						</div>
-						<div class="main_form_next_btn">
-							<a href="#">→</a>
-						</div>
-						<div class="help_form_submit">
-							<input type="submit" value="Let's go">
-						</div>
-					</form>
+					<h2><?php echo $request_title; ?></h2>
+                    <a href="<?php echo $request_btn_link; ?>" class="help_btn"><?php echo $request_btn_text; ?></a>
 				</div>
 			</div>
 		</div>

@@ -8,6 +8,15 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
   );
   document.querySelector('head').appendChild(msViewportStyle)
 }
+
+jQuery(window).scroll(function(){
+    if (jQuery(window).scrollTop() > 50) {
+        jQuery('body').addClass('fixed');
+    } else {
+        jQuery('body').removeClass('fixed');
+    }
+});
+
 $(document).ready(function(){
 	$('.selectpicker').selectpicker();
 
@@ -78,6 +87,14 @@ $(document).ready(function(){
         $('.main_call_master_block a').attr('href').append('?ref=' + $('#master_call option').val());
     });
 
+    $('.main_about').lightGallery({
+        selector: '.main_about .main_about_overlay_gallery',
+        loop: true,
+        thumbnail: false,
+        autoplayControls: false,
+        download: false
+    });
+
     //GoogleMaps nozoom
     var googlemap = $('.googlemap');
     googlemap.css("pointer-events", "none");
@@ -94,7 +111,7 @@ $(document).ready(function(){
         loop:true,
         items: 3,
         margin: 30,
-        nav: false,
+        nav: true,
         navText: ['<span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>','<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>'],
         dots: true
     });

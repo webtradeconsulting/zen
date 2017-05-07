@@ -1,0 +1,28 @@
+body.fixed .header .logo {
+  height: 80px;
+  background: none; }
+
+body.fixed .header .header_search_form {
+  top: 0;
+  margin-top: 15px; }
+
+body.fixed .header .header_menu li a {
+  padding: 20px 20px 10px; }
+
+body.fixed .header .logo img {
+  margin-top: 39px; }
+
+body.fixed .header .header_phone {
+  width: 207px;
+  padding: 6px 20px 6px; }
+
+body.fixed .header .header_phone a {
+  padding: 8px 20px;
+  font-size: 18px;
+  line-height: 22px;
+  white-space: nowrap; }
+
+body.fixed .header_phone span {
+  display: none; }
+
+/*# sourceMappingURL=fixed.css.map */

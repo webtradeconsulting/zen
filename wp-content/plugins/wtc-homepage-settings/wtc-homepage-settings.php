@@ -184,6 +184,14 @@ function wtc_homesettings() {
                             <label for="qoute_author">Quote's author</label>
                             <input type="text" id="qoute_author" class="wtc_hs_field" name="wtc_homepage_settings[quote][author]" value="<?php echo (isset($wtc_homepage_settings['quote']['author'])) ? stripslashes($wtc_homepage_settings['quote']['author']) : '' ?>"/>
                         </div>
+                        <div class="wtc_hs_row">
+                            <label for="request_title">Request Service Title</label>
+                            <input id="request_title" class="wtc_hs_field" name="wtc_homepage_settings[request][title]" value="<?php echo (isset($wtc_homepage_settings['request']['title'])) ? stripslashes($wtc_homepage_settings['request']['title']) : '' ?>" />
+                            <label for="request_btn">Request Button Title</label>
+                            <input type="text" id="request_btn" class="wtc_hs_field" name="wtc_homepage_settings[request][btn_title]" value="<?php echo (isset($wtc_homepage_settings['request']['btn_title'])) ? stripslashes($wtc_homepage_settings['request']['btn_title']) : '' ?>"/>
+                            <label for="request_btn_link">Request Button Link</label>
+                            <input type="text" id="request_btn_link" class="wtc_hs_field" name="wtc_homepage_settings[request][btn_link]" value="<?php echo (isset($wtc_homepage_settings['request']['btn_link'])) ? stripslashes($wtc_homepage_settings['request']['btn_link']) : '' ?>"/>
+                        </div>
                     </div>
 				</div>
 				

@@ -68,3 +68,10 @@
   color: #94999c;
   text-align: center;
 }
+.about_link {
+  color: #1e5e82;
+  text-decoration: none;
+    &:hover {
+      color: #53827c;
+    }
+}

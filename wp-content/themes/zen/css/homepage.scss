@@ -173,10 +173,17 @@ $btn_bg: #ec821b;
     margin-bottom: 25px;
     font-size: 32px;
     line-height: 36px;
-    color: #1e5e82;
-    font-weight: 500;
-    text-transform: uppercase;
-    text-align: left;
+    a {
+      font-size: inherit;
+      line-height: inherit;
+      color: #1e5e82;
+      font-weight: 500;
+      text-transform: uppercase;
+      text-align: left;
+        &:hover {
+          color: #53827c;
+        }
+    }
     &:before {
       content: '';
       position: absolute;
@@ -227,6 +234,7 @@ $btn_bg: #ec821b;
   }
 }
 .main_help {
+  text-align: center;
   background: url("../images/bg.png") 50% 50% no-repeat;
   background-size: cover;
   .main_help_container {
@@ -239,7 +247,7 @@ $btn_bg: #ec821b;
     margin: 0 0 60px;
     font-size: 42px;
     line-height: 46px;
-    text-align: left;
+    text-align: center;
     text-transform: uppercase;
     color: #fff;
     font-weight: 500;
@@ -247,11 +255,30 @@ $btn_bg: #ec821b;
       content: '';
       position: absolute;
       bottom: 14px;
-      left: -60px;
+      left: 50%;
       width: 35px;
       height: 1px;
+      margin-left: -230px;
       border-bottom: 1px solid #fff;
     }
+  }
+  .help_btn {
+    display: inline-block;
+    width: auto;
+    padding: 12px 85px;
+    margin: 40px 0 0 0;
+    font-size: 22px;
+    line-height: 26px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: #ec821b;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+      &:hover {
+        background: lighten($btn_bg, 10%);
+      }
   }
   .help_form {
     .main_form_field {
@@ -279,25 +306,6 @@ $btn_bg: #ec821b;
       transition: 0.2s;
       &:focus {
         border-color: #1e5e82;
-      }
-    }
-    input[type="submit"] {
-      display: inline-block;
-      width: auto;
-      padding: 12px 85px;
-      margin: 40px 0 0 170px;
-      font-size: 22px;
-      line-height: 26px;
-      color: #fff;
-      text-transform: uppercase;
-      font-weight: 700;
-      background: $btn_bg;
-      -webkit-border-radius: 6px;
-      -moz-border-radius: 6px;
-      border-radius: 6px;
-      transition: 0.2s;
-      &:hover {
-        background: lighten($btn_bg, 10%);
       }
     }
   }

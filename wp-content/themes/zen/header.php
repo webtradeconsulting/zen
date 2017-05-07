@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/owl.carousel.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/lightGallery.css">
     <link rel='stylesheet' href="<?php bloginfo('template_url'); ?>/css/main.css" type="text/css" media='all' />
     <link rel='stylesheet' href="<?php bloginfo('template_url'); ?>/css/media.css" type="text/css" media='all' />
 
@@ -41,6 +42,7 @@
     <script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/libs/bootstrap.min.js'></script>
     <script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/bootstrap-select.min.js'></script>
     <script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/owl.carousel.min.js'></script>
+    <script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/lightGallery.min.js'></script>
     <script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/scripts.js'></script>
 
     <!--[if lt IE 9]>
