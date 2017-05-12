@@ -72,7 +72,7 @@ function baw_hack_wp_title_for_home( $title ) {
 
 //Adding select element dynamically populated with custom posts to Contact Form 7 WP plugin
 //In CF7 form use [customselect coursesdropdown] format to insert the select element, in the email body - [coursesdropdown]
-wpcf7_add_shortcode('customselect', 'createdynamicselect', true);
+wpcf7_add_form_tag('customselect', 'createdynamicselect', true);
 function createdynamicselect(){
     $wtc_homepage_settings = get_option('wtc_homepage_settings');
     $options = $wtc_homepage_settings['topform']['select'];
