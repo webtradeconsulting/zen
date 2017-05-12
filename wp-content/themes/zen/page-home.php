@@ -92,6 +92,7 @@
 					<div class="quote_footer">
 						<span><?php echo stripslashes($wtc_homepage_settings['quote']['author']); ?></span>
 					</div>
+                    <a href="<?php the_permalink(87); ?>" class="quote_btn">All Testimonials</a>
 				</div>
 			</div>
             <?php

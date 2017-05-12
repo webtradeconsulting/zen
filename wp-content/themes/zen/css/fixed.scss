@@ -8,9 +8,10 @@ body.fixed .header .header_search_form {
 }
 body.fixed .header .header_menu li a {
   position: relative;
-  padding: 20px 20px 10px;
+  padding: 20px 20px 14px;
   opacity: .99;
   z-index: 100;
+  margin-bottom: -3px;
 }
 body.fixed .header .logo img {
   margin-top: 39px;

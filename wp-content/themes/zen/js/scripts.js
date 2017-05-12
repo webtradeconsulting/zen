@@ -72,20 +72,35 @@ $(document).ready(function(){
 
     AjaxContent.init({containerDiv:"#service_content",contentDiv:"#service_content"}).ajaxify_links(".services_sidebar a");
 
-    var service_links = $('.services_sidebar .has_children li');
+    var service_links = $('.services_sidebar .has_children li a');
 
     service_links.click(function() {
         service_links.removeClass('active');
-        service_links.parent().parent().parent().removeClass('active');
+        service_links.parents('li').removeClass('active');
         if ($(this).attr('href') == window.location.href) {
             $(this).addClass('active');
             $(this).parent().parent().parent().addClass('active');
         }
     });
+    $('.services_sidebar .has_children > a').click(function () {
+        service_links.removeClass('active');
+        $('.services_sidebar .has_children > a').parent().removeClass('active');
+        if ($(this).attr('href') == window.location.href) {
+            $(this).parents('li').addClass('active');
+        }
+
+    });
+
+    var link = $('.main_call_btn').attr('href');
+
+    console.log($('.main_call_btn').attr('href'));
 
     $('#master_call').change(function() {
-        $('.main_call_master_block a').attr('href').append('?ref=' + $('#master_call option').val());
+        var option = $('#master_call option:selected').attr('value').replace(' ', '_');
+        $('.main_call_master_block a').attr('href', link + '#' + option);
     });
+
+
 
     $('.main_about').lightGallery({
         selector: '.main_about .main_about_overlay_gallery',
@@ -116,7 +131,24 @@ $(document).ready(function(){
         dots: true
     });
 
+    var brokenSelect = document.querySelectorAll('.request_form #broken option');
+    var selectOptionHash = window.location.hash.replace('_', ' ');
+    var selectOption = selectOptionHash.replace('#', '');
+    console.log(selectOption)
+    console.dir(document.querySelector('.broken .filter-option'));
+    for (var i = 0; i < brokenSelect.length; i++) {
+        if (brokenSelect[i].text == selectOption) {
+            brokenSelect[0].text = selectOption;
+            brokenSelect[0].value = selectOption;
+            document.querySelector('.broken .filter-option').innerHTML = selectOption;
+        }
+    }
+
 });
+
+
+
+
 
 var AjaxContent = function(){
     var container_div = '';

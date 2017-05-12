@@ -175,11 +175,13 @@
     float: right;
     width: 257px;
     height: 100%;
-    padding: 8px 20px 29px;
+    padding: 14px 20px 29px;
+    margin-bottom: -7px;
     text-align: center;
     background: #00ba7f;
     position: relative;
     z-index: 20;
+    border-bottom: 1px solid #fff;
     span {
       display: block;
       padding-bottom: 5px;
@@ -195,6 +197,7 @@
       line-height: 30px;
       color: #00ba7f;
       font-weight: 500;
+      white-space: nowrap;
       background: #fff;
       border-radius: 7px;
       &:hover {

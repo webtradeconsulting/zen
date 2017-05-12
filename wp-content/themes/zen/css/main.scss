@@ -12,8 +12,19 @@ html, body {
 body {
   padding-top: 105px;
 }
-a { color: #414142; text-decoration: none; outline: none; -webkit-transition: 0.2s; -moz-transition: 0.2s; transition: 0.2s; }
-a:hover { color: #286482; text-decoration: none; }
+a {
+  color: #414142;
+  text-decoration: none;
+  outline: none;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  transition: 0.2s;
+    &:hover, &:focus{
+      color: #286482;
+      text-decoration: none;
+    }
+}
+
 h1.page_title {
   margin: 0;
   padding: 0 0 70px;
